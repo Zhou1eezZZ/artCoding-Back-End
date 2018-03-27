@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+.navbar #sideControls {
+    display: none;
+}
+
+html.iframeMode #topPanel {
+    margin-top: 30px;
+}
+
+#topPanel {
+    margin-top: 20vh;
+    margin-bottom: 50px;
+}
+#topPanel .edit {
+    border-color: #bbb;
+    background: transparent;
+    width: 100%;
+}
+#topPanel .edit:before,
+#topPanel label {
+    border-color: #333;
+}
+
+#errorMessage{
+    padding-top:10px;
+    padding-bottom:10px;
+}
+#recoverLink {
+    position: absolute;
+    right: 15px;
+    top: 4px;
+}
+.buttons {
+    padding-top: 0px;
+}
+
+.buttons > * {
+    width: 100%;
+}
+.buttons > button {
+}
+input[type='checkbox']{
+    display:none;
+}
+
+#topPanel input[type="checkbox"] + label {
+    border-color: transparent;
+    padding-right: 32px;
+    position: static;
+    display: inline-block;
+    background:url('/assets/img/icons/icon_close_dark.png') right center no-repeat;
+    max-width: 200px;
+}
+#topPanel input[type="checkbox"]:checked + label {
+    background:url('/assets/img/icons/icon_checkmark_dark.png') right center no-repeat;
+}
+input:-webkit-autofill {
+    -webkit-text-fill-color: #333 !important;
+    -webkit-box-shadow: 0 0 0px 1000px #f5f5f5 inset;
+    z-index: 0;
+
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s;
+}
+
+#password {
+  padding-right: 45px;
+}

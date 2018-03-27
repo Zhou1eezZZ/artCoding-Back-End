@@ -1,0 +1,644 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body {
+    /* background: #f7f3ed; */
+    background:#ececec;
+	font-size: 16px;
+}
+html, body {
+    padding: 0px;
+    /* font-family: "pt sans", "freight-sans-pro", helvetica; */
+    font-family: 'Source Sans Pro', Helvetica, sans-serif;
+    /* font-family: 'Raleway', sans-serif; */
+    /* font-family: 'Roboto', sans-serif; */
+    /* font-family: 'Signika', sans-serif; */
+    /* font-family: 'Quicksand', sans-serif; */
+    /* font-family: 'Gudea', sans-serif; */
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.3;
+    /* -webkit-font-smoothing: subpixel-antialiased; */
+    box-sizing: border-box;
+    min-height: 100%;
+    background-color: #f5f5f5;
+}
+a{
+	color: #27B1BE;
+}
+a:hover{
+	text-decoration: none;
+}
+.btn{
+	font-size: 18px;
+}
+.navbar {
+    color: #f5f5f5;
+    height: auto;
+    max-height: 50px;
+    border-bottom: solid 0px;
+    border-bottom-color: rgba(241, 241, 241, 0);
+    /* transition: max-height 400ms, border-bottom-color 400ms, background-color 400ms; */
+    transition: border-bottom-color 400ms, background-color 400ms;
+    background-color: rgba(31, 31, 31, 0);
+    overflow: hidden;
+    z-index: 100;
+}
+.navbar .iconsRow {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 50px;
+}
+.navbar #websiteControls {
+    position: absolute;
+    left: 15px;
+}
+.navbar .OPlogo {
+    padding-right: 0px;
+    transition: width 400ms, border-color 400ms 400ms;
+    display: inline-block;
+    width: 30px;
+    margin-right: 0px;
+}
+.panel {
+    margin-bottom: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+hr {
+    border-top: 1px solid #333;
+}
+ul.sketchList {
+    padding: 0;
+    list-style: none;
+}
+.userList, .sketchList {
+    list-style: none;
+    padding: 0;
+}
+ul.sketchList>li {
+    padding: 0;
+}
+div.diagonalLine {
+    overflow: hidden;
+}
+h1,
+h2,
+h3 {
+    margin-top: 0;
+}
+div.diagonalLine::after {
+    content: "";
+    position: absolute;
+    width: 141.4%;
+    height: 141.4%;
+    border-bottom: 1px solid #333;
+    -webkit-transform: translateY(-50%) translateX(-50%) rotate(-45deg);
+    position: absolute;
+}
+a.btn.btn-primary.green{
+	background: #27B1BE;
+    color: #f5f5f5;
+	border-color: #27B1BE;
+}
+.btn-primary.green:hover{
+	color: #f5f5f5;
+    border-color: #27B1BE;
+}
+a.btn.btn-default.green{
+	color: #27B1BE;
+    border-color: #27B1BE;
+}
+.btn.btn-default.green:hover{
+	color: #27B1BE;
+    border-color: #27B1BE;
+}
+.searchBar{
+	border: none;
+	border-bottom: solid 1px #999999;
+	box-shadow: none;
+	background-image: url(./../image/icon_search.png);
+	background-position: right center;
+    background-repeat: no-repeat;
+	outline:none;
+	background-color: rgba(255,255,255,0);
+}
+.form-control:focus{
+	box-shadow: none;
+	border-color: #999999;
+}
+.sketchThumbContainer {
+    position: relative;
+    margin: 0px;
+    display: inline-block;
+    cursor: pointer;
+    padding: 0;
+    float: left;
+    width: 100%;
+    height: auto;
+    border: 1px solid #f5f5f5;
+    /* background: #fff; */
+}
+.sketchThumb {
+    border: solid 0px rgb(245, 245, 245);
+    width: 100%;
+    transition: transform 400ms, opacity 200ms;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: auto;
+    opacity: 1;
+    background: #fff;
+}
+.ratioKeeper {
+    width: 100%;
+    height: auto;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+.worksNav{
+	float: left;
+	cursor: pointer;
+}
+.worksNavFont{
+	font-weight:bold !important;
+}
+.worksNav p{
+	border-right: solid 1px #515151;
+	padding: 0 10px;
+	font-size: 20px;
+}
+.display{
+	display:none;
+}
+.worksNavLast p{
+	border: none;
+}
+formItem>input:not([type='checkbox']) {
+    outline: none;
+    border: none;
+    background: rgba(240, 240, 240, 0.1) !important;
+    padding: 5px;
+    padding-left: 120px;
+    background: none !important;
+    position: static;
+    border-bottom: 1px solid rgba(240, 240, 240, 0.3);
+    display: block;
+    margin: 0px;
+    height: auto;
+    width: 100%;
+    font-weight: 400;
+    min-height: 32px;
+}
+formItem>label {
+    margin-bottom: 1px;
+    margin-left: 15px;
+}
+label {
+    position: absolute;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 18px;
+    display: block;
+    bottom: -1px !important;
+    left: 0px !important;
+    border-bottom: 1px solid rgb(245, 245, 245);
+    width: auto;
+    height: auto;
+    line-height: 1;
+    font-weight: 600;
+    padding-top: 9px;
+    padding-bottom: 6px;
+    border-radius: 0;
+    z-index: 3;
+    cursor: pointer;
+    max-width: 100px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+}
+formItem {
+    margin-bottom: 30px;
+    position: relative;
+}
+button.btn.btn-primary.green{
+	color:#ffffff;
+	background-color:#27B1BE;
+	border-color:#27B1BE;
+}
+#logoDark img{
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2; 
+	opacity: 0;
+}
+#logoDark img:hover{
+	opacity: 1;
+}
+.icon_arrow_circle_left_dark {
+    background: url(./../image/icon_arrow_circle_left_dark.png)center center no-repeat;
+    width: 22px;
+    height: 22px;
+}
+.icon_arrow_circle_right_dark {
+    background: url(./../image/icon_arrow_circle_right_dark.png) center center no-repeat;
+    width: 22px;
+    height: 22px;
+}
+.icon_settings_dark {
+    width: 21px;
+    height: 21px;
+    background: url(./../image/icon_list_black@2x.png) center center no-repeat;
+	background-size: 21px 21px;
+}
+.sketchLabel {
+    height: auto;
+    cursor: pointer;
+    color: #333;
+    position: absolute;
+    z-index: 3;
+    padding: 3px;
+    font-family: bariol;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    background: rgba(255, 255, 255, 1);
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    transition: opacity 200ms, max-height 800ms, max-width 800ms;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: left;
+    overflow: hidden;
+    border: 1px solid transparent;
+}
+.sketchLabel p {
+    margin-bottom: 0;
+}
+.sketchLabel:hover {
+    max-width: 400%;
+    max-height: 400%;
+    border-color: #F8E71C;
+	opacity: 1;
+}
+.navbar #userControls {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+#editButton {
+    background: url(../image/icon_edit.png) right center no-repeat;
+    background-size: 5px 22px;
+    background-position: right 6px;
+    padding: 6px 11px 0 0;
+    cursor: pointer;
+    height: 30px;
+    display: inline-block;
+}
+#topPanel .userThumbContainer {
+    width: 100%;
+    border: 3px solid #f5f5f5;
+}
+.userThumb {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    border-radius: 50%;
+    margin-right: 15px;
+    width: 100%;
+    height: 100%;
+    transition: opacity 200ms, border-color 200ms;
+    opacity: 1;
+    pointer-events: none;
+    z-index: 20;
+    background: url(../image/icon_user.png) center center no-repeat #facc2eb5;
+    background-size: 42px;
+}
+.fadeInOnEdit, .edit .fadeOutOnEdit {
+    transition: opacity 400ms;
+    opacity: 0 !important;
+}
+.userThumbContainer {
+    position: relative;
+    width: 50%;
+    margin: 0px;
+    display: block;
+    vertical-align: middle;
+    cursor: pointer;
+    padding: 0;
+    float: left;
+    border: 1px solid #333;
+    border-radius: 50%;
+    top: 50%;
+    transition: opacity 200ms, border-color 200ms;
+}
+.editable {
+    white-space: pre-wrap;
+}
+.color-light {
+    color: #f5f5f5 !important;
+}
+.nav-tabs li.active {
+    font-weight: 400;
+    border-color: #f5f5f5;
+    color: #f5f5f5;
+}
+.nav-tabs li {
+    border-bottom: 5px solid transparent;
+    cursor: pointer;
+	margin-top: 14px;
+}
+.nav-tabs li a {
+    color: #f5f5f5 !important;
+    background: none !important;
+    border-color: transparent !important;
+    padding: 5px 15px !important;
+    line-height: 1.2;
+}
+.sketchThumbContainer.newSketch {
+    background: url(../image/add.png) no-repeat;
+    background-position: center center;
+}
+.sketchThumbContainer.newSketch .sketchLabel {
+    text-align: center;
+    opacity: 1;
+    background: none;
+    height: 24px;
+    overflow: hidden;
+}
+.tab-pane.jumbotron {
+    padding-left: 0;
+    padding-right: 0;
+    background: #f5f5f5;
+}
+#follow-row {
+    margin-top: -60px;
+}
+.followerCard {
+    margin-bottom: 10px;
+}
+.product-container {
+    /* width: 200px; */
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    background-color: #fff;
+}
+.followerCardImg {
+    width: 100%;
+    transition: transform 400ms, opacity 200ms;
+    height: auto;
+    opacity: 1;
+    background: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.followerCard {
+    margin-bottom: 10px;
+}
+
+/*ListView实现样式代码*/
+.sketchList.listView li:not(.newSketchLi) {
+    clear: both;
+    width: 100%;
+}
+
+.sketchList.listView li:not(.newSketchLi) .sketchThumbContainer {
+    background-position: left 20px center;
+
+}
+
+.sketchList.listView li:not(.newSketchLi) .sketchThumb {
+    width: 100px;
+    height: 100px;
+}
+.sketchList.listView li:not(.newSketchLi) .attrLabel {
+    left: 0;
+    right: auto;
+}
+
+.sketchList.listView li:not(.newSketchLi) .ratioKeeper {
+    display: none;
+}
+
+.sketchList.listView li:not(.newSketchLi) .sketchLabel {
+    min-height: 100px;
+    position: relative;
+    opacity: 1;
+    background: none;
+    left: 0;
+    padding-left: 115px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: visible;
+    resize: vertical;
+}
+.sketchList.listView li:not(.newSketchLi) .sketchLabel * {
+}
+
+/*以下为XX页面代码*/
+/*zly 12/18 personal*/
+.editable.edit, .selectable.edit, .toggleable.edit, .removable.edit {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(240, 240, 240, 0.3);
+    padding: 5px 5px 3px 110px;
+    position: relative;
+    min-height: 29px;
+    margin-bottom: 0px;
+}
+
+#topPanel.edit .fullname {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.editable.edit.text-center, .selectable.edit.text-center, .toggleable.edit.text-center, .removable.edit.text-center {
+    padding: 5px 80px;
+}
+
+
+/*以下为codeWriting代码*/
+body {
+    /* background: #f7f3ed; */
+    background: rgb(245, 245, 245);
+}
+
+html, body {
+    padding: 0px;
+    /* font-family: "pt sans", "freight-sans-pro", helvetica; */
+    font-family: 'Source Sans Pro', Helvetica, sans-serif;
+    /* font-family: 'Raleway', sans-serif; */
+    /* font-family: 'Roboto', sans-serif; */
+    /* font-family: 'Signika', sans-serif; */
+    /* font-family: 'Quicksand', sans-serif; */
+    /* font-family: 'Gudea', sans-serif; */
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.3;
+    -webkit-font-smoothing: subpixel-antialiased;
+    box-sizing: border-box;
+    min-height: 100%;
+}
+.navbar #mainControls {
+    white-space: nowrap;
+    z-index: 2;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+button.btn-primary.red, button.btn-primary.red.disabled, a.btn.btn-primary.red, a.btn.btn-primary.red.disabled {
+    background: #F54949;
+    color: #f5f5f5;
+}
+
+.navbar .btn {
+    height: 30px;
+    padding-top: 3px;
+    margin-left: 10px;
+}
+
+button.btn-primary, a.btn-primary {
+    font-weight: bold;
+}
+
+button.red, button.red.disabled, a.btn.red, a.btn.red.disabled {
+    border-color: #F54949;
+    color: #F54949;
+}
+
+button.btn-primary, a.btn.btn-primary {
+    background-color: #f5f5f5;
+    color: #f5f5f5;
+}
+
+button, button.btn, a.btn {
+    background: transparent;
+    border: 1px solid #f5f5f5;
+    border-radius: 4px;
+    outline: none;
+    padding: 5px 10px 5px 10px;
+    font-size: 18px;
+}
+
+
+.dropdown-menu{
+     z-index: 100;
+}
+.btn-code-default {
+    color: #ffa6a6;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+
+/*以下为代码保存信息填写页面代码*/
+
+.editable.edit, .selectable.edit, .toggleable.edit, .removable.edit {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(240, 240, 240, 0.3);
+    padding: 5px 5px 3px 110px;
+    position: relative;
+    min-height: 29px;
+    margin-bottom: 0px;
+}
+.OPLiveForm label {
+    position: absolute;
+    margin-bottom: 1px;
+    text-transform: uppercase;
+    font-size: 18px;
+    display: block;
+    bottom: -1px !important;
+    left: 0px !important;
+    border-bottom: 1px solid rgb(245, 245, 245);
+    width: auto;
+    height: auto;
+    line-height: 1;
+    font-weight: 600;
+    padding-top: 9px;
+    padding-bottom: 6px;
+    border-radius: 0;
+    z-index: 3;
+    cursor: pointer;
+    max-width: 100px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+}
+.toTextarea {
+    text-align: left; 
+    border: 1px solid #aaa; 
+    white-space: pre-wrap;
+    white-space: normal; 
+    word-wrap: break-word;
+    padding: 1px; 
+}
+formItem>.description {
+    font-size: 12px;
+    display: block;
+    text-align: right;
+    padding-top: 5px;
+    line-height: 1;
+    position: absolute;
+    right: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.toggleable.edit {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.editable.edit::before, .selectable.edit::before, .toggleable.edit::before, .removable.edit::before {
+    content: attr(label) !important;
+    text-transform: uppercase;
+    font-size: 18px;
+    display: block;
+    position: absolute;
+    bottom: -1px !important;
+    left: 0px !important;
+    border-bottom: 1px solid rgb(245, 245, 245);
+    width: auto !important;
+    height: 25px !important;
+    line-height: 1;
+    font-family: 'PT Sans';
+    font-weight: 600;
+}
+.toggleable.edit:after {
+    content: "Off";
+    display: block;
+    float: right;
+}
+input::-webkit-input-placeholder{ /*WebKit browsers*/
+	color: #aaa;
+}
+input::-moz-input-placeholder{ /*Mozilla Firefox*/
+	color: #aaa;
+}
+input::-ms-input-placeholder{ /*Internet Explorer*/ 
+	color: #aaa;
+}
+
+.navbarHover{
+	position: absolute;
+	height: 50px;
+	right: 250px;
+	top: 0;
+	line-height: 50px;
+	color: #000;
+}
+.navbarHover a{
+	color: #27b1be;
+}

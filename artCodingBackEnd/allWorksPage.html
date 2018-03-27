@@ -1,0 +1,310 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>allWorksPage</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0, target-densitydpi=device-dpi">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+	
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/allWorks_view.css">
+</head>
+
+<body>
+	<div class="navbar navbar-fixed-top" role="navigation">
+		<div class="row iconsRow">
+			<div id="websiteControls">
+				<div class="OPlogo icon">
+					<a href="index.php" id="logoLight">
+						<img alt="logo2" src="image/logo2.png" width="50" height="40">
+					</a>
+					<a href="index.php" id="logoDark">
+						<img src="image/logoHover2.png" width="50" height="40">
+					</a>
+				</div>
+			</div>
+			<p class="navbarHover">你好，<a href="personalPage.php">用户名</a></p>
+			<div class="input-group" style="margin-top: 0;position: absolute;right: 15px;">
+				<input type="text" class="form-control searchBar" placeholder="搜索" />
+			</div>
+		</div>
+	</div>
+	<div id="topPanel" class="container">
+		<div id="searchHeader" class="row">
+			<div class="col-xs-11 bariol">
+				<ul>
+					<li class="worksNav"><p>推荐</p></li>
+					<li class="worksNav"><p>游戏</p></li>
+					<li class="worksNav"><p>可视化</p></li>
+					<li class="worksNav worksNavLast"><p>粒子</p></li>
+				</ul>
+			</div>
+			<div id="viewOptions" class="col-xs-1 text-right">
+				<div id="allWorksPageIcon" onClick="setListView()" class="icon icon_settings_dark" data-toggle="popover" title="Popover title" data-content=""></div>
+			</div>
+		</div>
+		<ul id="searchResults" class="clearfix sketchList">
+			<li class="col-sm-1 sketchLi">
+				<a class="sketchThumbContainer" href="/">
+					<img src="image/example1.jpg" class="sketchThumb">
+					<img src="image/blank.png" class="ratioKeeper">
+					<div class="sketchLabel">
+						<p>
+							<span class="sketchTitle">My Sketch</span>
+
+							<br><span>by</span> Jacobpinney1</p>
+				</div>
+				<div class="sketchLabel01 fadeInOnEdit hide" id="sketchLabel01" >
+				<p>
+							<span class="sketchTitle">标签</span>
+
+							<br><span>游戏|趣味|简易</span> </p>
+							</div>
+				</a>
+			</li>
+			<li class="col-sm-1 sketchLi">
+				<a class="sketchThumbContainer" href="/">
+					<img src="image/example2.jpg" class="sketchThumb">
+					<img src="image/blank.png" class="ratioKeeper">
+					<div class="sketchLabel">
+						<p><span class="sketchTitle">My Sketch</span><br><span>by</span> Jacobpinney1</p>
+					</div>
+					<div class="sketchLabel01 row fadeInOnEdit hide" id="sketchLabel02">
+				<p>
+							<span class="sketchTitle">标签</span>
+
+							<br><span>游戏|趣味|简易</span> </p>
+							</div>
+				</a>
+			</li>
+			<li class="col-sm-1 sketchLi">
+				<a class="sketchThumbContainer" href="/">
+					<img src="image/example3.jpg" class="sketchThumb">
+					<img src="image/blank.png" class="ratioKeeper">
+					<div class="sketchLabel">
+						<p><span class="sketchTitle">My Sketch</span><br><span>by</span> Jacobpinney1</p>
+					</div>
+					<div class="sketchLabel01 row fadeInOnEdit hide" id="sketchLabel03">
+				<p>
+							<span class="sketchTitle">标签</span>
+
+							<br><span>游戏|趣味|简易</span> </p>
+							</div>
+				</a>
+			</li>
+			<li class="col-sm-1 sketchLi">
+				<a class="sketchThumbContainer" href="/">
+					<img src="image/example4.jpg" class="sketchThumb">
+					<img src="image/blank.png" class="ratioKeeper">
+					<div class="sketchLabel">
+						<p><span class="sketchTitle">My Sketch</span><br><span>by</span> Jacobpinney1</p>
+					</div>
+					<div class="sketchLabel01 row fadeInOnEdit hide" id="sketchLabel04">
+				<p>
+							<span class="sketchTitle">标签</span>
+
+							<br><span>游戏|趣味|简易</span> </p>
+							</div>
+				
+				</a>
+			</li>
+			<li class="col-sm-1 sketchLi">
+				<a class="sketchThumbContainer" href="/">
+					<img src="image/example5.jpg" class="sketchThumb">
+					<img src="image/blank.png" class="ratioKeeper">
+					<div class="sketchLabel">
+						<p><span class="sketchTitle">My Sketch</span><br><span>by</span> Jacobpinney1</p>
+					</div>
+					<div class="sketchLabel01 row fadeInOnEdit hide" id="sketchLabel05">
+				<p>
+							<span class="sketchTitle">标签</span>
+
+							<br><span>游戏|趣味|简易</span> </p>
+							</div>
+					
+				</a>
+			</li>
+			<li class="col-sm-1 sketchLi">
+				<a class="sketchThumbContainer" href="/">
+					<img src="image/example6.jpg" class="sketchThumb">
+					<img src="image/blank.png" class="ratioKeeper">
+					<div class="sketchLabel">
+						<p><span class="sketchTitle">My Sketch</span><br><span>by</span> Jacobpinney1</p>
+					</div>
+					
+				</a>
+			</li>
+			<li class="col-sm-1 sketchLi">
+				<a class="sketchThumbContainer" href="/">
+					<img src="image/example7.jpg" class="sketchThumb">
+					<img src="image/blank.png" class="ratioKeeper">
+					<div class="sketchLabel">
+						<p><span class="sketchTitle">My Sketch</span><br><span>by</span> Jacobpinney1</p>
+					</div>
+					
+				</a>
+			</li>
+			<li class="col-sm-1 sketchLi">
+				<a class="sketchThumbContainer" href="/">
+					<img src="image/example8.jpg" class="sketchThumb">
+					<img src="image/blank.png" class="ratioKeeper">
+					<div class="sketchLabel">
+						<p><span class="sketchTitle">My Sketch</span><br><span>by</span> Jacobpinney1</p>
+					</div>
+					
+				</a>
+			</li>
+			<li class="col-sm-1 sketchLi">
+				<a class="sketchThumbContainer" href="/">
+					<img src="image/example9.jpg" class="sketchThumb">
+					<img src="image/blank.png" class="ratioKeeper">
+					<div class="sketchLabel">
+						<p><span class="sketchTitle">My Sketch</span><br><span>by</span> Jacobpinney1</p>
+					</div>
+					
+				</a>
+			</li>
+			<li class="col-sm-1 sketchLi">
+				<a class="sketchThumbContainer" href="/">
+					<img src="image/example10.jpg" class="sketchThumb">
+					<img src="image/blank.png" class="ratioKeeper">
+					<div class="sketchLabel">
+						<p><span class="sketchTitle">My Sketch</span><br><span>by</span> Jacobpinney1</p>
+					</div>
+					
+				</a>
+			</li>
+			<li class="col-sm-1 sketchLi">
+				<a class="sketchThumbContainer" href="/">
+					<img src="image/example11.jpg" class="sketchThumb">
+					<img src="image/blank.png" class="ratioKeeper">
+					<div class="sketchLabel">
+						<p><span class="sketchTitle">My Sketch</span><br><span>by</span> Jacobpinney1</p>
+					</div>
+					
+				</a>
+			</li>
+			<li class="col-sm-1 sketchLi">
+				<a class="sketchThumbContainer" href="/">
+					<img src="image/example12.jpg" class="sketchThumb">
+					<img src="image/blank.png" class="ratioKeeper">
+					<div class="sketchLabel">
+						<p><span class="sketchTitle">My Sketch</span><br><span>by</span> Jacobpinney1</p>
+					</div>
+					
+				</a>
+			</li>
+			<li class="col-sm-1 sketchLi">
+				<a class="sketchThumbContainer" href="/">
+					<img src="image/example12.jpg" class="sketchThumb">
+					<img src="image/blank.png" class="ratioKeeper">
+					<div class="sketchLabel">
+						<p><span class="sketchTitle">My Sketch</span><br><span>by</span> Jacobpinney1</p>
+					</div>
+					
+				</a>
+			</li>
+			<li class="col-sm-1 sketchLi">
+				<a class="sketchThumbContainer" href="/">
+					<img src="image/example11.jpg" class="sketchThumb">
+					<img src="image/blank.png" class="ratioKeeper">
+					<div class="sketchLabel">
+						<p><span class="sketchTitle">My Sketch</span><br><span>by</span> Jacobpinney1</p>
+					</div>
+					
+				</a>
+			</li>
+			<li class="col-sm-1 sketchLi">
+				<a class="sketchThumbContainer" href="/">
+					<img src="image/example10.jpg" class="sketchThumb">
+					<img src="image/blank.png" class="ratioKeeper">
+					<div class="sketchLabel">
+						<p><span class="sketchTitle">My Sketch</span><br><span>by</span> Jacobpinney1</p>
+					</div>
+				</a>
+			</li>
+			<li class="col-sm-1 sketchLi">
+				<a class="sketchThumbContainer" href="/">
+					<img src="image/example9.jpg" class="sketchThumb">
+					<img src="image/blank.png" class="ratioKeeper">
+					<div class="sketchLabel">
+						<p><span class="sketchTitle">My Sketch</span><br><span>by</span> Jacobpinney1</p>
+					</div>
+				</a>
+			</li>
+			<li class="col-sm-1 sketchLi">
+				<a class="sketchThumbContainer" href="/">
+					<img src="image/example8.jpg" class="sketchThumb">
+					<img src="image/blank.png" class="ratioKeeper">
+					<div class="sketchLabel">
+						<p><span class="sketchTitle">My Sketch</span><br><span>by</span> Jacobpinney1</p>
+					</div>
+				</a>
+			</li>
+			<li class="col-sm-1 sketchLi">
+				<a class="sketchThumbContainer" href="/">
+					<img src="image/example7.jpg" class="sketchThumb">
+					<img src="image/blank.png" class="ratioKeeper">
+					<div class="sketchLabel">
+						<p><span class="sketchTitle">My Sketch</span><br><span>by</span> Jacobpinney1</p>
+					</div>
+				</a>
+			</li>
+			<li class="col-sm-1 sketchLi">
+				<a class="sketchThumbContainer" href="/">
+					<img src="image/example6.jpg" class="sketchThumb">
+					<img src="image/blank.png" class="ratioKeeper">
+					<div class="sketchLabel">
+						<p><span class="sketchTitle">My Sketch</span><br><span>by</span> Jacobpinney1</p>
+					</div>
+				</a>
+			</li>
+			<li class="col-sm-1 sketchLi">
+				<a class="sketchThumbContainer" href="/">
+					<img src="image/example5.jpg" class="sketchThumb">
+					<img src="image/blank.png" class="ratioKeeper">
+					<div class="sketchLabel">
+						<p><span class="sketchTitle">My Sketch</span><br><span>by</span> Jacobpinney1</p>
+					</div>
+				</a>
+			</li>
+			<li class="col-sm-1 sketchLi">
+				<a class="sketchThumbContainer" href="/">
+					<img src="image/example4.jpg" class="sketchThumb">
+					<img src="image/blank.png" class="ratioKeeper">
+					<div class="sketchLabel">
+						<p><span class="sketchTitle">My Sketch</span><br><span>by</span> Jacobpinney1</p>
+					</div>
+				</a>
+			</li>
+			<li class="col-sm-1 sketchLi">
+				<a class="sketchThumbContainer" href="/">
+					<img src="image/example3.jpg" class="sketchThumb">
+					<img src="image/blank.png" class="ratioKeeper">
+				
+				</a>
+			</li>
+			<li class="col-sm-1 sketchLi">
+				<a class="sketchThumbContainer" href="/">
+					<img src="image/example2.jpg" class="sketchThumb">
+					<img src="image/blank.png" class="ratioKeeper">
+					
+				</a>
+			</li>
+			<li class="col-sm-1 sketchLi">
+				<a class="sketchThumbContainer" href="/">
+					<img src="image/example1.jpg" class="sketchThumb">
+					<img src="image/blank.png" class="ratioKeeper">
+					
+				</a>
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="js/allWorksPage.js"></script>
+	 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+/*
+link: #428bca;
+text: #333;
+admin: #5c5c5c;
+red: #F54949
+bg beige: #f7f3ed;
+yellow: #E2E19F;
+*/
+
+.icon {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    width: 30px;
+    height: 30px;
+    border-color: rgba(255, 255, 255, 0);
+    transition: border-color 200ms, background-color 200ms 200ms;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+.icon.circle {
+    border-radius: 50%;
+    border: 1px solid;
+}
+
+.icon.red {
+    border-color: #EF6C60;
+}
+
+input + label.icon {
+    display: inline-block !important;
+}
+
+input:checked + label.icon {
+    display: none !important;
+}
+
+label.icon {
+    margin: 0;
+}
+
+label.icon:after,
+label.icon:before {
+    display: none !important;
+}
+
+.icon_edit_dark {
+    width: 10px;
+    height: 30px;
+    background: url('../image/icon_edit_dark.png') center center no-repeat;
+}
+.icon_duplicate_dark {
+    width: 21px;
+    height: 21px;
+    background: url('/assets/img/icons/icon_duplicate_dark.png') center center no-repeat;
+}
+.icon_duplicate_red {
+    width: 21px;
+    height: 21px;
+    background: url('/assets/img/icons/icon_duplicate_red.png') center center no-repeat;
+}
+.icon_settings_dark {
+    width: 21px;
+    height: 21px;
+    background: url('/assets/img/icons/icon_settings_dark.png') center center no-repeat;
+}
+.icon_record {
+    width: 30px;
+    height: 30px;
+    background: url('/assets/img/icons/icon_record.png') center center no-repeat;
+}
+.icon_recording {
+    width: 30px;
+    height: 30px;
+    background: url('/assets/img/icons/icon_recording.png') center center no-repeat;
+}
+.icon_x {
+    width: 22px;
+    height: 22px;
+    background: url('/assets/img/icons/icon_x.png') center center no-repeat;
+}
+
+.icon_sort_red {
+    width: 16px;
+    height: 14px;
+    background: url('/assets/img/icons/icon_sort_red.png') center center no-repeat;
+}
+
+.icon_checkmark {
+    width: 22px;
+    height: 22px;
+    background: url('/assets/img/icons/icon_checkmark.png') center center no-repeat;
+}
+
+.icon_heart_arrow {
+    width: 22px;
+    height: 22px;
+    background: url('/assets/img/icons/icon_heart_arrow@2x.png') left top no-repeat;
+    background-size: 22px 22px;
+}
+
+.icon_x_small_dark {
+    width: 13px;
+    height: 13px;
+    background: url('../image/icon_x_small_dark.png') center center no-repeat;
+}
+
+.icon_x_circle {
+    width: 21px;
+    height: 21px;
+    background: url('/assets/img/icons/icon_x_circle.png') center center no-repeat;
+}
+
+.icon_x_circle_dark {
+    width: 21px;
+    height: 21px;
+    background: url('/assets/img/icons/icon_x_circle_dark.png') center center no-repeat;
+    border-radius: 50%;
+}
+
+.icon_x_circle_red {
+    width: 21px;
+    height: 21px;
+    background: url('/assets/img/icons/icon_x_circle_red.png') center center no-repeat;
+}
+
+.icon_loader {
+    width: 21px;
+    height: 21px;
+    background: url('/assets/img/icons/icon_loader.svg') center center no-repeat;
+}
+
+.icon_play_dark {
+    background: url('/assets/img/icons/icon_play_circle_dark.png') center center no-repeat;
+}
+
+.icon_plus {
+    background: url('/assets/img/icons/icon_plus_dark.png') center center no-repeat;
+}
+
+.icon_plus.red,
+.icon_plus_red {
+    background: url('/assets/img/icons/icon_plus_red.png') center center no-repeat;
+    width: 15px;
+    height: 15px;
+}
+
+.icon_plus_circle_dark {
+    background: url('.../image/icon_plus_circle_dark.png') center center no-repeat;
+    width: 21px;
+    height: 21px;
+}
+
+.icon_arrow_left {
+    background: url('/assets/img/sketch/icon_arrow_left.svg') 8px center no-repeat;
+}
+
+.icon_arrow_right {
+    background: url('/assets/img/sketch/icon_arrow_right.svg') 9px center no-repeat;
+}
+
+.icon_caret_down_dark {
+    background-size: 14px 7px;
+    background: url('/assets/img/icons/icon_caret_down_dark.png') center center no-repeat;
+    border-radius: 0;
+    width: 14px;
+    height: 7px;
+}
+
+.icon_arrow_circle_right_dark {
+    background: url('/assets/img/icons/icon_arrow_circle_right_dark.png') center center no-repeat;
+    width: 22px;
+    height: 22px;
+}
+
+.icon_arrow_circle_left_dark {
+    background: url('/assets/img/icons/icon_arrow_circle_left_dark.png') center center no-repeat;
+    width: 22px;
+    height: 22px;
+}
+
+.icon_arrow_circle_right {
+    background: url('/assets/img/icons/icon_arrow_circle_right.png') 0px center no-repeat;
+    background-size: 22px 22px;
+}
+.icon_arrow_circle_up_dark {
+    background: url('/assets/img/icons/icon_arrow_circle_up_dark.png') 0px center no-repeat;
+    background-size: 21px 21px;
+    border-radius: 50%;
+    width: 21px;
+    height:21px;
+}
+.icon_arrow_circle_down_dark {
+    background: url('/assets/img/icons/icon_arrow_circle_down_dark.png') 0px center no-repeat;
+    background-size: 21px 21px;
+    border-radius: 50%;
+    width: 21px;
+    height:21px;
+}
+
+
+.icon.fx_hover_border {
+    border-color: rgba(251, 251, 251, 0);
+    background-color: rgba(33, 33, 33, 0);
+    transition: border-color 200ms, background-color 200ms;
+}
+
+.icon.fx_hover_border:hover {
+    border-color: rgba(251, 251, 251, 1);
+    background-color: rgba(33, 33, 33, 0.5);
+}
+
+.icon_license {
+    width: 11px;
+    height: 14px;
+    background: url('/assets/img/icons/icon_license.png') center center no-repeat;
+}
+
+.icon_view_list_dark {
+    width: 21px;
+    height: 21px;
+    background: url('/assets/img/icons/icon_view_list_dark.png') center center no-repeat;
+    border-radius: 0;
+}
+
+.icon_view_grid_dark {
+    width: 21px;
+    height: 21px;
+    background: url('/assets/img/icons/icon_view_grid_dark.png') center center no-repeat;
+    border-radius: 0;
+}
+#codePanel #codeTabs li{
+    width: 100px;
+}

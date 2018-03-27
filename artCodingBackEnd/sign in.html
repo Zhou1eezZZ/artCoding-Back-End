@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sign in - Artcoding</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0, target-densitydpi=device-dpi">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/signin_view.css">
+</head>
+
+<body>
+<div class="navbar navbar-fixed-top" role="navigation">
+		<div class="row iconsRow">
+			<div id="websiteControls">
+				<div class="OPlogo icon">
+					<a href="index.php" id="logoLight">
+						<img alt="logo2" src="image/logo2.png" width="50" height="40">
+					</a>
+					<a href="index.php" id="logoDark">
+						<img src="image/logoHover2.png" width="50" height="40">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="topPanel" class="panel container">
+            <form id="signinForm" action="login.php" method="POST">
+                <div class="row">
+                    <h1 class="bariol col-xs-12 col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4">登录</h1>
+                </div>
+                <div class="row" style="margin-top: 30px;">
+                    <formitem class="col-xs-12 col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4">
+                        <label for="email">邮箱账号</label>
+                        <input id="email" maxlength="60" type="email" required="" class="field edit" name="email">
+                    </formitem>
+                </div>
+                <div class="row" style="margin-top: 10px;">
+                    <formitem class="col-xs-12 col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4">
+                        <label for="password">密码</label>
+                        <input id="password" type="password" maxlength="16" minlength="6" required="" class="field edit" name="password">
+                        <div id="recoverLink" class="text-right"><a href="/home/recover" class="text-right small">忘记密码</a></div>
+                    </formitem>
+                </div>
+                <div class="row">
+                    <div class="buttons col-xs-12 col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4">
+                        <div id="errorMessage" class="errorMessage"></div>
+                        <button id="submitBuyytton" type="submit"  class="btn btn-primary green ">登录</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4"><br><br>没有账号? <br><a href="join.html">加入我们</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+</body>
+</html>

@@ -1,0 +1,206 @@
+html,
+body {
+    background: transparent !important;
+}
+
+.navbar #sideControls {
+    display: none;
+}
+h3, .h3 {
+    font-size: 22px;
+}
+html.allowScroll,
+html.allowScroll body
+{
+    overflow: auto !important;
+}
+
+#topPanel {
+    margin-top: 5vh;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#topPanel h1 {
+    font-size: 13vw;
+    /*    background: rgba(245, 245, 245,0.8);*/
+}
+
+#topPanel .description {
+    /*    background: rgba(245, 245, 245,0.8);*/
+    width: auto;
+}
+
+#sketch {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+}
+
+#sketch.changing {
+    transition: opacity 200ms;
+    opacity: 0;
+}
+
+#sketch,
+featured {
+    transition: opacity 1s 400ms;
+}
+
+.navbar.expanded {
+    /*    take it over the featured text*/
+    z-index: 1041;
+}
+
+#sketch iframe {
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+featured {
+    opacity: 1;
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px 30px;
+    text-align: center;
+    position: relative;
+}
+
+featured .icon_arrow_circle_left_dark {
+    position: absolute;
+    left: -15px;
+    top: 0px;
+}
+
+featured .icon_arrow_circle_right_dark {
+    position: absolute;
+    right: -15px;
+    top: 0px;
+}
+
+.buttons {
+    padding-top: 30px;
+}
+
+.buttons>a {
+    width: auto;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.buttons>a.btn.btn-default {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+/*===SEARCH=====*/
+
+#searchContainer {
+    position: relative;
+    margin-bottom: 0;
+    background: rgba(241, 241, 241, 0.9);
+    padding: 30px 0;
+}
+html.allowScroll #searchContainer {
+    position: relative; 
+}
+
+#searchContainer h2 {
+    min-height: 45px;
+}
+
+#searchHeader ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: inline-block;
+    vertical-align: top;
+    transition: margin-top 200ms, margin-bottom 200ms;
+}
+
+#searchHeader li {
+    transition: opacity 200ms;
+}
+
+#searchHeader li.selected {}
+
+#searchHeader li:not(.selected) {
+    opacity: 0.4;
+    font-weight: 100;
+}
+
+#searchHeader .searchForm {}
+
+#searchHeader .searchForm,
+#searchHeader input {
+    display: inline-block;
+    border-color: #333;
+    color: #333;
+    width: auto;
+    min-width: 100px;
+    font-size: inherit;
+    padding-top: 0;
+}
+
+#searchHeader .icon_heart {
+    margin-top: -6px;
+    width: 30px;
+}
+
+.tooltip-inner {
+    max-width: 350px;
+    /* If max-width does not work, try using width instead */
+    width: 350px;
+    font-family: 'Source Sans Pro', Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+div.diagonalLine {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: -40px;
+    top: -40px;
+}
+
+
+/*=====*/
+
+@media (min-width:700px) {
+    #topPanel h1 {
+        font-size: 80px;
+        /*    background: rgba(245, 245, 245, 0.8);
+*/
+    }
+}
+
+@media (min-width:768px) {
+    html,
+    body {
+        overflow: hidden;
+        background: transparent !important;
+    }
+    #searchContainer {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        background: rgba(245, 245, 245, 0.7);
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+    featured {
+        position: absolute;
+        top: -50px;
+        right: 0;
+        background-color: rgba(255,255,255,0.2); 
+        width: auto;
+        z-index: 999;
+    }
+}

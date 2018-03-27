@@ -1,0 +1,161 @@
+.panel.inactive{
+    visibility: hidden;
+}
+.panel.active, .sidePanel.active {
+    visibility: visible;
+    -webkit-animation-duration: 200ms;
+    -webkit-animation-name: fadeInFromNone;
+    animation-duration: 200ms;
+    animation-name: fadeInFromNone;
+}
+
+#editSketchPanel {
+ 
+    overflow: auto;
+}
+
+.panel.inactive, .sidePanel.inactive {
+    visibility: hidden;
+}
+
+
+
+.panel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0;
+    margin-top: -125px;
+  
+}
+
+#editSketchPanel>.container>.row {
+    margin-bottom: 10px;
+}
+#topPanel01 .edit:before, #topPanel01 label {
+    border-color: #333;
+}
+#topPanel01 .edit {
+    border-color: #bbb;
+    background: transparent;
+    width: 100%;
+
+}
+#topPanel02 .edit:before, #topPanel02 label {
+    border-color: #333;
+}
+#topPanel02 .edit {
+    border-color: #bbb;
+    background: transparent;
+    width: 100%;
+}
+
+#editSketchPanel{
+    overflow-y: hidden;
+
+}
+#personcolor{
+    color: #27b0be; 
+    cursor: pointer;
+}
+#studentcolor{
+  cursor: pointer;
+}
+#topPanel{
+    overflow-y: hidden;
+}
+body{
+/*    overflow-y: hidden;*/
+}
+
+
+
+#topPanel01 {
+    margin-top: 28vh;
+    margin-bottom: 50px;
+    height: 700px;
+}
+#topPanel02 {
+    margin-top: 28vh;
+    margin-bottom: 50px;
+    height: 300px;
+}
+#skip{
+    height: 300px;
+}
+
+
+
+
+#citylocation {
+    margin-bottom: 1px;
+    margin-left: 15px;    
+
+}
+#citydiv{
+    margin-bottom: 30px;
+	line-height: 29px;
+}
+#schoollocation {
+    margin-bottom: 1px;
+    margin-left: 15px;    
+
+}
+#schooldiv{
+    margin-bottom: 30px;
+	line-height: 29px;
+}
+#sel1{
+    margin-bottom: 1px;
+	padding-left: 120px;
+    width: 100%;
+}
+#schoolName{
+    margin-bottom: 1px;
+    padding-left: 120px;
+}
+
+.provinceCityAll .tabs li a.current, .provinceCity .tabs li a.current:visited {
+    background: url(../image/bg_mc_0113_3.png) center center repeat;
+    color: #FFF;
+}
+
+
+
+ ul li{ list-style:none;}
+      #schoolName { width:100%;}
+      .provinceSchool { display:none;position:absolute;width:580px;height:310px;border:1px solid #72B9D7; }
+      .provinceSchool .title { width:100%;height:30px;background:url(../image/bg_mc_0113_3.png) repeat-x center left;}
+      .provinceSchool .title span { margin-left:10px;font-weight:600;color:#FFF;line-height:30px;}
+      .provinceSchool .proSelect { width:550px;height:22px;margin:10px 0 6px 15px;}
+      .provinceSchool .proSelect select { width:136px;}
+      .provinceSchool .proSelect input { display:none;}
+      .provinceSchool .schoolList { width:550px;height:200px;margin-left:15px;overflow-y:auto; border:1px solid #72B9D7;}
+      .provinceSchool .schoolList ul { width:540px;}
+      .provinceSchool .schoolList ul li { float:left;width:200px;height:22px;margin-left:6px;padding-left:6px;line-height:22px;cursor:pointer;}
+        .provinceSchool .schoolList ul li.DoubleWidthLi { width:328px;}
+      .provinceSchool .schoolList ul li:hover { background:#72B9D7;}
+      .provinceSchool .button { width:100%;height:40px;margin-top:8px;}
+      .provinceSchool .button button { float:right;height:30px;margin-right:20px;padding:4px 10px; background:url(images/title-bg.pngui-bg.png);border:none;color:#FFF;font-weight:600;cursor:pointer;}
+
+
+
+.city_input {
+
+    background: url(../image/ts-indexcity.png) no-repeat right center;
+    cursor: pointer;
+	border: none;
+	border-bottom: solid 1px #bbb;
+}
+
+#schoolName {
+    background: url(../image/ts-indexcity.png) no-repeat right center;
+    cursor: pointer;
+	border: none;
+	border-bottom: solid 1px #bbb;
+}
+#proSchool{
+  background-color: grey;
+  z-index: 10000;
+}

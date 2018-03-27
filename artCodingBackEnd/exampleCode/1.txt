@@ -1,0 +1,74 @@
+/*
+Morph
+
+Controls:
+  - Move the mouse to adjust the count.
+
+Author:
+  Jason Labbe
+
+Site:
+  jasonlabbe3d.com
+*/
+
+var radius = 200;
+var maxRotate = 360;
+var bgHue = 0;
+
+function setup() {
+	createCanvas(windowWidth, windowHeight);
+	rectMode(CENTER);
+	colorMode(HSB, 255);
+}
+
+
+function mouseMoved() {
+	bgHue++;
+	if (bgHue > 255) {
+		bgHue = 0;
+	}
+}
+
+
+function draw() {
+	let count = int(map(mouseX, 0, width, 8, 50));
+	let speed = map(mouseX, 0, width, 0.035, 0.05);
+	let offset = map(mouseX, 0, width, 10, 2);
+	let rotateRate = map(mouseX, 0, width, 0.25, 0.1);
+	let steps = 360/count;
+	let itemSize = steps*2;
+	let roundness = itemSize*0.5;
+	let i = 0;
+
+	background(bgHue, 150, 255);
+
+	// Set as the background's complementary color.
+	let fgHue = bgHue+127;
+	if (fgHue > 255) {
+		fgHue = fgHue%255;
+	}
+	stroke(fgHue, 150, 255);
+
+	strokeWeight(map(mouseX, 0, width, 8, 2));
+	noFill();
+
+	translate(width/2, height/2);
+	rotate(radians(-frameCount*rotateRate));
+
+	// Use 359 to avoid having two items on top of each other.
+  for (let a = 0; a < 359; a+=steps) {
+		let x = sin(radians(a))*radius;
+		let y = cos(radians(a))*radius;
+
+		let t = sin((i*offset+frameCount)*speed)*maxRotate;
+		let r = constrain(map(t, 0, -maxRotate, 0, roundness), 0, roundness);
+
+		push();
+		translate(x, y);
+		rotate(radians(-a+t));
+		rect(0, 0, itemSize, itemSize, r);
+		pop();
+
+		i++;
+	}
+}

@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="751343c4-c172-42bf-b5f4-aef28b466ffc" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>editSketchButton</find>
+      <find>CodeMirror</find>
+      <find>text</find>
+      <find>getValue</find>
+      <find>jsCanRun</find>
+      <find>beforeCodePlay</find>
+      <find>var value</find>
+      <find>bef</find>
+      <find>codeplay</find>
+      <find>editor.l</find>
+      <find>value</find>
+      <find>imageurl</find>
+      <find>screenshot</find>
+      <find>save()</find>
+      <find>save</find>
+      <find>code0</find>
+      <find>textarea</find>
+      <find>editor</find>
+      <find>comment_post</find>
+      <find>code</find>
+      <find>保存</find>
+      <find>作品介绍</find>
+      <find>标题</find>
+      <find>操作方法</find>
+      <find>操作</find>
+      <find>分类</find>
+      <find>lynn</find>
+      <find>$name</find>
+      <find>来踩一脚</find>
+      <find>image/example1.jpg</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/js/join.js" />
+        <option value="$PROJECT_DIR$/111.js" />
+        <option value="$PROJECT_DIR$/join.html" />
+        <option value="$PROJECT_DIR$/login_out.php" />
+        <option value="$PROJECT_DIR$/personalPage.html" />
+        <option value="$PROJECT_DIR$/sign in.html" />
+        <option value="$PROJECT_DIR$/upload_img.php" />
+        <option value="$USER_HOME$/Desktop/最近的文件/artcoding002/artcoding/personalPage.html" />
+        <option value="$PROJECT_DIR$/js/personalPage.js" />
+        <option value="$PROJECT_DIR$/js/jquery.min.js" />
+        <option value="$PROJECT_DIR$/savePersonalInformation.php" />
+        <option value="$PROJECT_DIR$/login.php" />
+        <option value="$PROJECT_DIR$/logout.php" />
+        <option value="$PROJECT_DIR$/register.php" />
+        <option value="$PROJECT_DIR$/conn.php" />
+        <option value="$PROJECT_DIR$/exampleCode/1.txt" />
+        <option value="$PROJECT_DIR$/readCode.php" />
+        <option value="$PROJECT_DIR$/codeWriting.html" />
+        <option value="$PROJECT_DIR$/js/codeWriting.js" />
+        <option value="$PROJECT_DIR$/saveCodeWriting.php" />
+        <option value="$PROJECT_DIR$/codeFile/1624954751@qq.com/14.txt" />
+        <option value="$PROJECT_DIR$/codeReading.html" />
+        <option value="$PROJECT_DIR$/js/codeReading.js" />
+        <option value="$USER_HOME$/Desktop/最近的文件/artcoding002/artcoding/codeReading.html" />
+        <option value="$PROJECT_DIR$/codeReading.php" />
+        <option value="$PROJECT_DIR$/personalPage.php" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/index.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="localhost">
+    <include_path>
+      <path value="F:\wampserver\wamp\bin\php\php5.5.12" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="952" />
+    <option name="width" value="976" />
+    <option name="height" value="1038" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers ProjectPane="true" />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="artcoding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="artcoding" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.lastSelected" value="configurable.group.appearance" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../artcodingcms" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://F:/wampserver/wamp/www/artcoding/codeWriting.html" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\wampserver\wamp\www\artcoding\image" />
+      <recent name="F:\wampserver\wamp\www\artcoding\js" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.login.php">
+    <configuration name="codeReading.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:1024/artcoding/codeReading.php" />
+    <configuration name="codeWriting.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:1024/artcoding/codeWriting.html" />
+    <configuration name="join.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:1024/artcoding/join.html" />
+    <configuration name="login.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:1024/artcoding/login.php" />
+    <configuration name="codeWriting.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="codeWriting.js" working-dir="$PROJECT_DIR$/js" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Node.js.codeWriting.js" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.codeReading.php" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.join.html" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.codeWriting.html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.login.php" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.login.php" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.codeReading.php" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.codeWriting.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.join.html" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.codeWriting.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="751343c4-c172-42bf-b5f4-aef28b466ffc" name="Default" comment="" />
+      <created>1519700483141</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1519700483141</updated>
+      <workItem from="1519700488751" duration="22820000" />
+      <workItem from="1519789386657" duration="5502000" />
+      <workItem from="1519875558836" duration="624000" />
+      <workItem from="1519956884669" duration="5748000" />
+      <workItem from="1519974381942" duration="1076000" />
+      <workItem from="1519976794534" duration="3934000" />
+      <workItem from="1519980773047" duration="5785000" />
+      <workItem from="1520089186539" duration="75000" />
+      <workItem from="1520090082026" duration="5084000" />
+      <workItem from="1520141819733" duration="148000" />
+      <workItem from="1520141980781" duration="12223000" />
+      <workItem from="1520178023266" duration="69000" />
+      <workItem from="1520178112300" duration="131000" />
+      <workItem from="1520215198169" duration="5249000" />
+      <workItem from="1520243764932" duration="1606000" />
+      <workItem from="1520261945716" duration="1285000" />
+      <workItem from="1520311719181" duration="1576000" />
+      <workItem from="1520330423786" duration="582000" />
+      <workItem from="1520331062398" duration="43000" />
+      <workItem from="1520331423926" duration="763000" />
+      <workItem from="1520332211340" duration="60000" />
+      <workItem from="1520332575236" duration="872000" />
+      <workItem from="1520333769148" duration="958000" />
+      <workItem from="1520413589826" duration="14451000" />
+      <workItem from="1520495735415" duration="10121000" />
+      <workItem from="1520558845672" duration="6724000" />
+      <workItem from="1520655287271" duration="13658000" />
+      <workItem from="1520680931379" duration="7450000" />
+      <workItem from="1520695897696" duration="3050000" />
+      <workItem from="1520733224174" duration="249000" />
+      <workItem from="1520733847678" duration="20980000" />
+      <workItem from="1520819531550" duration="7801000" />
+      <workItem from="1520866269645" duration="2990000" />
+      <workItem from="1520917873457" duration="7385000" />
+      <workItem from="1520928621173" duration="2397000" />
+      <workItem from="1521015947654" duration="10749000" />
+      <workItem from="1521082725639" duration="829000" />
+      <workItem from="1521104064260" duration="3372000" />
+      <workItem from="1521110835389" duration="510000" />
+      <workItem from="1521111827908" duration="92000" />
+      <workItem from="1521116400422" duration="2250000" />
+      <workItem from="1521126236318" duration="148000" />
+      <workItem from="1521126722104" duration="2098000" />
+      <workItem from="1521164177916" duration="12828000" />
+      <workItem from="1521288530392" duration="1381000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="207726000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19166666" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32821077" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/join.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2087">
+          <caret line="10" column="52" lean-forward="true" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/最近的文件/artcoding/artcoding/personalPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-184">
+          <caret line="28" column="63" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="450" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/最近的文件/artcoding002/artcoding/js/personalPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="132" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/头像上传示例/index.php" />
+    <entry file="file://$USER_HOME$/Desktop/最近的文件/artcoding002/artcoding/js/jquery.min.js" />
+    <entry file="file://$USER_HOME$/Desktop/最近的文件/artcoding002/artcoding/personalPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="451" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upload_img.php" />
+    <entry file="file://$PROJECT_DIR$/js/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6327">
+          <caret line="3" column="31946" lean-forward="false" selection-start-line="3" selection-start-column="31946" selection-end-line="3" selection-end-column="31946" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../artcoding004/artcoding/codeWriting.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="364" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testfile.txt" />
+    <entry file="file://$PROJECT_DIR$/savePersonalInformation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="3" column="51" lean-forward="false" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="2" column="51" lean-forward="false" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codeImg/url.txt" />
+    <entry file="file://$PROJECT_DIR$/codeFile/codetxt.txt" />
+    <entry file="file://$PROJECT_DIR$/conn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codeImg/1624954751@qq.com/.txt" />
+    <entry file="file://F:/qq下载内容/673974693/FileRecv/codeWriting.js" />
+    <entry file="file://$PROJECT_DIR$/../artcoding001/js/codeReading.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../artcoding001/js/codeWriting.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-287">
+          <caret line="253" column="21" lean-forward="true" selection-start-line="253" selection-start-column="21" selection-end-line="253" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codeFile/1624954751@qq.com/.txt" />
+    <entry file="file://$PROJECT_DIR$/codeImg/1624954751@qq.com/6.txt" />
+    <entry file="file://$PROJECT_DIR$/exampleCode/1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="817">
+          <caret line="73" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="73" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codeFile/1624954751@qq.com/9.txt" />
+    <entry file="file://$PROJECT_DIR$/codeFile/1624954751@qq.com/8.txt" />
+    <entry file="file://$PROJECT_DIR$/codeFile/1624954751@qq.com/7.txt" />
+    <entry file="file://$PROJECT_DIR$/codeFile/1624954751@qq.com/6.txt" />
+    <entry file="file://$PROJECT_DIR$/codeFile/1624954751@qq.com/10.txt" />
+    <entry file="file://$PROJECT_DIR$/codeImg/1624954751@qq.com/8.txt" />
+    <entry file="file://$PROJECT_DIR$/codeImg/1624954751@qq.com/7.txt" />
+    <entry file="file://$PROJECT_DIR$/js/codeWriting.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="143" column="31" lean-forward="false" selection-start-line="143" selection-start-column="31" selection-end-line="143" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saveCodeWriting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1612">
+          <caret line="52" column="80" lean-forward="false" selection-start-line="52" selection-start-column="80" selection-end-line="52" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="985">
+          <caret line="40" column="28" lean-forward="false" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codeImg/1624954751@qq.com/11.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="0" column="556" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="60862" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/add.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/example1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codeReading.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="77" column="38" lean-forward="false" selection-start-line="77" selection-start-column="38" selection-end-line="77" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codeWriting.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="204" column="18" lean-forward="false" selection-start-line="204" selection-start-column="18" selection-end-line="204" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="72" column="3" lean-forward="false" selection-start-line="72" selection-start-column="3" selection-end-line="72" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/user_view.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21359">
+          <caret line="689" column="5" lean-forward="false" selection-start-line="689" selection-start-column="5" selection-end-line="689" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codeImg/1624954751@qq.com/14.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="0" column="25043" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="67238" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codeFile/1624954751@qq.com/14.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sign in.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="12" column="50" lean-forward="true" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/personalPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codeFile/1624954751@qq.com/15.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/codeReading.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1209">
+          <caret line="39" column="1" lean-forward="false" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readCode.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/最近的文件/artcoding002/artcoding/codeReading.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codeReading.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding>
+            <marker date="1521192393974" expanded="true" signature="163:207" ph="select * fro... project" />
+            <marker date="1521192393974" expanded="true" signature="590:634" ph="select * fro... userbasic" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="122" column="48" lean-forward="true" selection-start-line="122" selection-start-column="48" selection-end-line="122" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personalPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="242" column="31" lean-forward="false" selection-start-line="242" selection-start-column="31" selection-end-line="242" selection-end-column="31" />
+          <folding>
+            <marker date="1521192393911" expanded="true" signature="189:240" ph="select * fro... userbasic" />
+            <marker date="1521192393911" expanded="true" signature="9805:9826" ph="SELECT * FRO... project" />
+            <marker date="1521192393911" expanded="true" signature="9805:9839" ph="SELECT * FRO... project" />
+            <marker date="1521192393911" expanded="true" signature="9805:9844" ph="SELECT * FRO... project" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

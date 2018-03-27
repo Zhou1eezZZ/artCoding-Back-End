@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Join - Artcoding</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0, target-densitydpi=device-dpi">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="css/join_view.css">
+
+
+<link href="css/cityLayout.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/join.css">
+
+
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/cityselect.js"></script>
+  <!-- <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script> -->
+  <script src="http://libs.baidu.com/jquery/1.6.4/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script src="js/join.js"></script>
+<script src="js/school.js"></script>
+</head>
+
+<body>
+	<div class="navbar navbar-fixed-top" role="navigation">
+		<div class="row iconsRow">
+			<div id="websiteControls">
+				<div class="OPlogo icon">
+					<a href="index.php" id="logoLight">
+						<img alt="logo2" src="image/logo2.png" width="50" height="40">
+					</a>
+					<a href="index.php" id="logoDark">
+						<img src="image/logoHover2.png" width="50" height="40">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+         <div id="topPanel01" class="panel  edit active">
+            <div class="panel container edit" >
+                <form id="joinForm" method="POST" action="register.php">
+					<div class="row">
+						 <h1 class="bariol col-xs-12 col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4">注册</h1>
+					</div>
+                    <div class="row">
+                    <formitem class="col-xs-12 col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4">
+                        <label for="fullname">昵称</label>
+                        <input id="fullname" maxlength="12" minlength="2" type="text" class="field edit" name="fullname" label="name" missingMessage="本项必填">
+                    </formitem>
+                	</div>
+              
+					<div class="row">
+						<formitem class="col-xs-12 col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4">
+							<label for="email">邮箱</label>
+							<input id="email" maxlength="60" type="email" required="" class="field edit" name="email">
+						</formitem>
+					</div>
+           
+					<div class="row">
+						<formitem class="col-xs-12 col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4">
+							<label for="password">密码</label>
+							<input id="password" maxlength="16" minlength="6" type="password" required="" class="field edit" name="password" placeholder="请输入6-16位的密码">
+						</formitem>
+					</div>
+                    <div class="row">
+                    <formitem class="col-xs-12 col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4">
+                        <label for="password">重复密码</label>
+                        <input id="passwordCheck" maxlength="16" minlength="6" type="password" required="" class="field edit" name="passwordCheck" onblur="checkPW()">
+                    </formitem>
+						<p id="passwordTips" style="color: red;display: none;">两次密码输入不同</p>
+               		</div>
+					
+					<div class="row">
+						<div class="col-xs-12 col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4" id="citydiv">
+							<label id="citylocation">城市</label>
+							<!-- <input id="city" maxlength="60" type="city" required="" class="field edit" name="city"> -->
+								<input name="city" id="sel1"  type="text"  class="city_input" placeholder="本项选填" readonly="readonly" >
+						</div>
+					</div>
+
+					<div class="row">
+                    <formitem class="col-xs-12 col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4">
+                        <label >用户类型</label>
+            			<div class="checkboxUT col-xs-3 col-sm-3" style="margin-left: 72px;">
+							<input class="userTypeCB" name="sex" type="radio" onclick="studentUser()" value="student"/><p class="userTypeCBP">学生用户</p>
+						</div>
+            			<div class="checkboxUT col-xs-3 col-sm-3">
+							<input class="userTypeCB" name="sex" type="radio" onclick="teacherUser()" value="teacher"/><p class="userTypeCBP">教师用户</p> 
+						</div>
+                    </formitem>
+                	</div>
+					<div class="row" id="schoolRow" style="display: none">
+						<div class="col-xs-12 col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4" id="schooldiv">
+							<label id="schoollocation">学校</label>
+							<input type="text" id="schoolName" name="schoolName" readonly/>
+							 <div id="proSchool" class="provinceSchool">
+							  <div class="title">
+								<span>已选择:</span>
+							  </div>
+							  <div class="proSelect">
+								<select></select>
+								<span>如没找到选择项，请选择其他手动填写</span>
+								<input type="text" >
+							  </div>
+							  <div class="schoolList">
+								<ul>
+								</ul>
+							  </div>
+							  <div class="button">
+								<button flag="0">取消</button>
+								<button flag="1">确定</button>
+							  </div>
+							</div>
+						</div>
+                	</div>
+					<div class="row" id="studentIDRow" style="display: none">
+						<formitem class="col-xs-12 col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4">
+							<label for="studentID">学号</label>
+							<input id="studentID" onkeyup="value=value.replace(/[^\d]/g,'')" placeholder="请输入数字" class="field edit" name="studentID">
+						</formitem>
+					</div>
+					<div class="row" id="teacherIDRow" style="display: none">
+						<formitem class="col-xs-12 col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4">
+							<label for="teacherID">工号</label>
+							<input id="teacherID" onkeyup="value=value.replace(/[^\d]/g,'')" placeholder="请输入数字" class="field edit" name="teacherID">
+						</formitem>
+					</div>
+					<div class="row">
+						<div class="buttons col-xs-12 col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4">
+							<div id="errorMessage" class="errorMessage"></div>
+							<button id="submitButton" type="submit" data-normal-text="Join" class="btn btn-primary green ">注册</button>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4"><br><br>已有账号? <a href="sign in.html">登录</a>
+						</div>
+					</div>
+				</form>
+            </div>
+     	</div> 
+</body>
+</html>

@@ -1,0 +1,71 @@
+
+#screenshot {
+    width: 80px;
+    height: 80px;
+    float: none;
+    background-color: #333;
+    border: 1px solid #f5f5f5;
+    opacity: 1;
+    display: inline-block;
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.icon_arrowToHeart.shoot {
+    display: block;
+    -webkit-animation-duration: 200ms;
+    -webkit-animation-name: arrowToHeart;
+    animation-duration: 200ms;
+    animation-name: arrowToHeart;
+}
+
+
+.toTextarea-placeholder:empty:after {
+    /* color: #555; */
+    /* font-style: italic; */
+    cursor: text;
+    content: attr(data-placeholder);
+}
+button.btn-primary.red, button.btn-primary.red.disabled, a.btn.btn-primary.red, a.btn.btn-primary.red.disabled {
+    background: #27b0be;
+    color: #f5f5f5;
+}
+
+button.btn-primary, a.btn-primary {
+    font-weight: bold;
+}
+
+button.red, button.red.disabled, a.btn.red, a.btn.red.disabled {
+    border-color: #F54949;
+    color: #27b0be;
+}
+
+button.btn-secondary {
+    border-color: transparent;
+}
+
+button, button.btn, a.btn {
+    background: transparent;
+    border: 1px solid #f5f5f5;
+    border-radius: 4px;
+    outline: none;
+    padding: 5px 10px 5px 10px;
+    font-size: 16px;
+}
+.newComment .textarea{
+	overflow-y: hidden;
+}
+.newComment{
+
+	padding-top: 200px;
+	overflow-y: hidden;
+}
+#sketchFiles{
+	overflow-y: hidden;
+}
+
+.newComment .buttonContainer{
+    visibility: visible；
+}
