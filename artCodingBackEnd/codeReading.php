@@ -1,13 +1,15 @@
-<?php
+php<?php
     include 'conn.php';
     header("Content-type:text/html;charset=utf-8");
     $codeID = $_GET['codeID'];
     //$codeID = 15;
     //利用项目ID查询url
-    $sql = "select * from project where 项目ID = '$codeID'";
+    //$sql = "select * from project where 项目ID = '$codeID'";
+    $sql = "select * from project where 项目ID = '1'";
     $result = mysql_query($sql);
     $row = mysql_fetch_array($result);
-    $codeUrl = $row['项目内容地址'];
+    //$codeUrl = $row['项目内容地址'];
+    $codeUrl = "codeFile/1624954751@qq.com/1.txt";
     $userID = $row['发布者ID'];
     if (!$codeUrl){
         exit('此作品已删除');
@@ -113,21 +115,6 @@
 
                 <div class="code_title">
                     <ul>
-                        <li class="first">文件
-                            <ul class="sub-menu">
-                                <li onclick="addPage()">新建</li>
-                                <li>保存</li>
-                                <li>另存为</li>
-                            </ul>
-                        </li>
-
-                        <li class="first">编辑
-                            <ul class="sub-menu">
-                                <li>排版</li>
-                                <li>查找</li>
-
-                            </ul>
-                        </li>
                         <li class="first">库
                             <ul class="sub-menu sub-last">
                                 <li>
@@ -191,17 +178,33 @@
             </div>
 
             <div id="sideWrapper" class="col-xs-3 col-sm-5">
-                <div id="sideButtons" class="text-right pull-right">
-                    <button id="editSketchButton" class="btn btn-primary" onclick="save()">保存</button>
-                </div>
+                <div id="sideControls" class="text-right pull-right  hidden-xs">
+                        <div class="metricGroup" onclick="heartarrow()">
+                            <div class="icon icon_heart"></div>
+                            <div class="icon icon_arrowToHeart"></div>
+                            <div class="metric" data-target="#heartSidePanel" id="heartnum">42</div>
+                        </div>
+                        <div class="metricGroup" style="top: -15px;">
+                            <div class="icon icon_share" data-target="#shareSidePanel"></div>
+                            <div class="metric hide" data-target="#shareSidePanel">
+                            </div>
+                        </div>
+<!--					   4/2修改-->
+						<div class="metricGroup">
+                            <div class="icon icon_fork" data-target="#forkSidePanel" title="fork it"></div>
+                            <div id="forkCount" class="metric" data-target="#forkSidePanel">
+                            </div>
+                        </div>
+                    </div>
+
             </div>
         </div>
     </div>
 </div>
 
 <div id="sketch" class="inactive" style="background-color:rgb(100,100,100);">
-    <iframe id="iframe" name="ifr"></iframe>
-
+    <iframe id="iframe" name="ifr">
+    </iframe>
 </div>
 
 <div id="editSketchPanel" class="panel OPLiveForm edit inactive">
@@ -341,46 +344,25 @@
 
                     <!--通过作评ID，得到相关评论-->
                     <div role="tabpanel" class="tab-pane" id="sketchFiles">
-                        <div id="comentOptions" class="radioGroup row">
-                            <settinglabel class="col-xs-12">
-                                <div class="comments row">
-                                    <div class="comment col-sm-12">
-                                        <h3 class="commentName bariol">
-                                            <!--此处根据作品用户的id搜寻进入用户个人页面-->
-                                            <a href="#"><?php echo $name;?></a>
-                                            <hr>
-                                        </h3>
-                                        <div class="commentBody">go!</div>
-                                        <div class="commentMeta">
-                                            <hr>
-                                            <div class="row">
-                                                <div class="commentDate col-sm-8">Just now</div>
-                                                <div class="col-sm-4 text-right">
-                                                    <div class="icon icon_flag" data-toggle="modal" data-target="#flagCommentModal"></div>
-                                                    <div class="icon icon_delete" data-toggle="modal" data-target="#deleteCommentModal"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="newCommentContainer row">
-                                    <div class="newComment">
-                                        <div class="textarea toTextarea toTextarea-placeholder empty" contenteditable="true" data-placeholder="来踩一脚？" id="comment_post"></div>
-                                        <div class="buttonContainer">
-                                            <button type="button" class="btn btn-primary red " onclick="post()">发布</button>
-                                            <button type="button" class="btn btn-secondary ">取消</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </settinglabel>
+                        <div class="comments row">
+                            <ul id="ul1" class="col-sm-12"></ul>
+                        </div>
+                        <div class="newCommentContainer row">
+                            <div class="newComment">
+                            	<div class="textarea toTextarea toTextarea-placeholder empty" contenteditable="true" data-placeholder="我想说..."  onClick="comtextarea(event)" id="comtextarea" ></div>
+		                        <div class="buttonContainer fadeInFromNone" >
+		                            <button type="button" class="btn btn-primary red " onClick="sendcom()">发送</button>
+		                            <button type="button" class="btn btn-secondary " onclick="sendCancel()">取消</button>
+		                            <div class="small">代码片段用 &lt;code&gt;&lt;/code&gt;</div>
+		                        </div>
+		                    </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <script src="js/codeWriting.js"></script>
+   
     <script src="js/codeReading.js"></script>
 
 </body>

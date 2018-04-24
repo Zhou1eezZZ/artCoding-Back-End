@@ -69,3 +69,53 @@ button, button.btn, a.btn {
 .newComment .buttonContainer{
     visibility: visible；
 }
+
+/*4.23*/
+.newCommentContainer{
+    position: absolute;
+    width: 100%;
+  
+}
+.newComment .textarea{
+    bottom: 0px;
+}
+.newComment .buttonContainer{
+    position: absolute;
+    width: 100%;
+    bottom: -80px;
+}
+.tab-pane{
+    position: relative;
+}
+
+.box{
+width: 300px;
+height: 100px;
+padding-left: 20px;
+/*background-color: yellow;*/
+/*border: 1px darkgray solid;
+border-radius: 30px;
+position: relative;*/
+}
+.box .nicheng{
+width: 100%;
+/*background-color: red;*/
+
+font-size: 30px;
+
+
+}
+
+.box .pinglun{
+width: 100%;
+font-size: 20px;
+
+/*background-color: cyan;*/
+
+}
+.box .shijian{
+width: 100%;
+
+
+font-size: 12px;
+}

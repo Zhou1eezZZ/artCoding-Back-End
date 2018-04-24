@@ -89,7 +89,16 @@
                         <li class="first">文件
                             <ul class="sub-menu">
                                 <li onclick="addPage()">新建</li>
-                                <li onclick="save()">保存</li>
+                                <li>保存</li>
+                                <li>另存为</li>
+                            </ul>
+                        </li>
+
+                        <li class="first">编辑
+                            <ul class="sub-menu">
+                                <li>排版</li>
+                                <li>查找</li>
+
                             </ul>
                         </li>
                         <li class="first">库
@@ -335,9 +344,8 @@ function draw() {
 
 
                             </settingoptions>
-                            <p style="float: left;padding: 0 20px;margin: 20px 0;">提示：自动保存允许您在网页崩坏后恢复之前未完成的代码。</br>
+							<p style="float: left;padding: 0 20px;margin: 20px 0;">提示：自动保存允许您在网页崩坏后恢复之前未完成的代码。</br>
 							若您想保存当前未编写完成代码，请点击这里<a style="cursor: pointer;" onClick="autoSave()">保存到草稿箱</a>。您同样可以在下次恢复它们。</p>
-
                         </div>
 
                     </div>

@@ -6,7 +6,7 @@
         session_destroy();
         setcookie(session_name(),'',time()-3600);
         //header("location:index.html");
-        echo "<script>alert('注销成功');window.location.href=\"index.html\";</script>";
+        echo "<script>alert('注销成功');window.location.href=\"index.php\";</script>";
     }else{
         echo "注销失败";
     }

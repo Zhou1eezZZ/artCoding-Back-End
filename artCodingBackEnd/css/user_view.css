@@ -58,6 +58,7 @@ hr {
     overflow: hidden;
     width: 100%;
     height: auto;
+    top: -20px;
     z-index: 4;
     transition: height 0ms, min-height 0ms;
 }

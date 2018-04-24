@@ -42,15 +42,15 @@ if(!isset($email)){
     <div class="row iconsRow">
         <div id="websiteControls">
             <div class="OPlogo icon">
-                <a href="index.html" id="logoLight">
+                <a href="index.php" id="logoLight">
                     <img alt="logo" src="image/logo.png" width="50" height="40">
                 </a>
-                <a href="index.html" id="logoDark">
+                <a href="index.php" id="logoDark">
                     <img src="image/logoHover.png" width="50" height="40">
                 </a>
             </div>
         </div>
-        <p class="navbarHover"><a href="index.html" onClick="return foo();">退出登录</a></p>
+        <p class="navbarHover"><a href="index.php" onClick="return foo();">退出登录</a></p>
         <div id="userTabs" class="text-center"></div>
         <div id="userControls" class="text-right">
             <div id="editButton"  class="editButton" data-loading-text="保存中.." data-active-text="保存" data-normal-text="编辑" autocomplete="off" onclick="submit();" id="eiditButton">编辑</div>
@@ -67,7 +67,7 @@ if(!isset($email)){
             <div class="by portrait">
                 <div class="col-xs-offset-5 col-xs-2 col-sm-offset-5.5 col-sm-4.5 userSetup  text-center">
                     <a href="#" class="userThumbContainer noLink  ">
-                        <img src="image/blank.png" class="ratioKeeper"><img src="<?php echo $icon?>" data-src="107357/thumbnail" class="userThumb noThumbnail" id="toppic">
+                        <img src="image/blank.png" class="ratioKeeper"><img src="image/blank.png" data-src="107357/thumbnail" class="userThumb noThumbnail" id="toppic">
                     </a>
                     <div class="col-xs-offset-5 userSetup  text-center">
                         <div class="addpic row fadeInOnEdit hide" id="changepic">

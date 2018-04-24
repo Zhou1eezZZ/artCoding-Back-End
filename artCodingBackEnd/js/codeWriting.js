@@ -144,7 +144,9 @@ function save(){
 				data:{code:value,img:imageurl,title:title,description:description,instructions:instructions,tags:tags},
 				success:function (msg) {
 					if(msg){
+						localStorage.removeItem("artCodingAutoSave");
                         window.location.href="personalPage.php";
+                        
 					}
                 },
 				error:function (msg) {
@@ -425,10 +427,10 @@ function changename(e){
 	//console.log($(e).attr('contenteditable'));
 	$(e).attr("contenteditable",true);
 	strId=$(e).children("div").attr("id");
-	$(e).children().remove();
 }
 
 function returnname(e){
+	$(e).children().remove();
 	$(e).attr("contenteditable",false);
 	console.log(strId);
 	$(e)[0].innerHTML+="<div contenteditable=\"false\" class=\"icon icon_x_small_dark tabCloseButton\" id=\""+strId+"\" onclick=\"remove(this)\"></div>";
@@ -444,8 +446,43 @@ function goIndex(){
     return false; 
 }
 function autoSave(){
-	alert("此功能正在测试！");
+	value = "";
+	for(var i=0;i<editor.length;i++){
+		if(i!=0){
+			value+=" \n ";
+		}
+		value+=editor[i].getValue();
+	}
+	localStorage.setItem("artCodingAutoSave",value);
+	
 }
+//打开页面时检查草稿箱是否有保存代码
+if(localStorage.getItem("artCodingAutoSave")!=null){
+	if(confirm("您的草稿箱中有上次未完成的代码。 \n是否将代码恢复？")){
+		var code = localStorage.getItem("artCodingAutoSave");
+		editor[0].setValue(code);
+		localStorage.removeItem("artCodingAutoSave");
+	}else{
+		localStorage.removeItem("artCodingAutoSave");
+	}
+}
+//定时调用自动保存函数
+var autoSaveInt;
+autoSaveON();
+//自动保存开关函数
+function autoSaveON(){
+	$("#autoSaveON").css("color","#fff");
+	$("#autoSaveOFF").css("color","#777");
+	autoSaveInt = self.setInterval("autoSave()",10000);
+}
+function autoSaveOFF(){
+	$("#autoSaveON").css("color","#777");
+	$("#autoSaveOFF").css("color","#fff");
+	window.clearInterval(autoSaveInt);
+	localStorage.removeItem("artCodingAutoSave");
+}
+
+
 $(window).resize(function(){
 	$("#alertContent").css({
 		position:"absolute",
