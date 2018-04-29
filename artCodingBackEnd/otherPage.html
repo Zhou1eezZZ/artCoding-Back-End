@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<title>OtherPage</title>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>    
+<script src="js/bootstrap.min.js"></script>
+<script src="js/otherpage.js"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/user_view.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/personalpage.css">
+<link rel="stylesheet" href="css/otherpage.css">
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top" role="navigation">
+	<div class="row iconsRow">
+		<div id="websiteControls">
+			<div class="OPlogo icon">
+				<a href="index.html" id="logoLight">
+					<img alt="logo" src="image/logo.png" width="50" height="40">
+				</a>
+				<a href="index.html" id="logoDark">
+					<img src="image/logoHover.png" width="50" height="40">
+				</a>
+			</div>
+		</div>
+		<p class="navbarHover"><a href="index.html" onClick="return foo();">退出登录</a></p>
+		<div id="userTabs" class="text-center"></div>
+
+		
+
+	</div>
+</div>
+
+
+
+
+<div id="topPanel" class="panel active color-light" style="min-height: 226px; max-height:2200px;">
+	<form id="editForm" class="container" autocomplete="off" autocorrect="off">
+		<div class="row meta">
+			<div class="by portrait">
+				<div class="col-xs-offset-5 col-xs-2 col-sm-offset-5.5 col-sm-4.5 userSetup  text-center">
+					<a href="#" class="userThumbContainer noLink  ">
+					<img src="image/blank.png" class="ratioKeeper">
+
+					<img src="image/blank.png" data-src="107357/thumbnail" class="userThumb noThumbnail" id="toppic">
+					</a>
+
+					<div class="col-xs-offset-5 userSetup  text-center">
+
+						<div class="addpic row fadeInOnEdit hide" id="changepic">  
+							<button>改头像</button>
+							<input id="logoimg" class="addlogo" type="file" multiple accept="image/*" name="logo" onChange="imgChange(event)"> 
+						</div>  
+
+					</div>
+					<div class="fadeInOnEdit uploadUserImage">
+
+						<img src="image/blank.png" class="cropit-gradient ratioKeeper">
+
+						<input type="file" class="cropit-image-input hide" accept="image/*">
+						<div class="cropit-image-preview" style="background-repeat: no-repeat;"><img src="image/blank.png" class="ratioKeeper"></div>
+						<input type="range" class="cropit-image-zoom-input" min="0" max="1" step="0.01">
+						<div class="buttons">
+							<a href="javascript:;" id="confirmUserImage" class="icon_followed"></a>
+							<a href="javascript:;" id="cancelUserImage" class="icon_cancel"></a>
+						</div>
+						<input type="hidden" name="userImageData" class="hidden-image-data">
+						<div class="icon_camera"></div>
+
+					</div>
+				</div>
+
+				<div class="byText col-xs-12 col-sm-offset-2 col-sm-8">
+					<div class="row">
+						<div class="fullnameContainer">
+
+							<div  id="fullname" class="fullname bariol editable col-xs-12  text-center " name="fullname" label="昵称" contenteditable="false">ting</div>	
+					      
+
+						</div>
+						<div id="followButton" class="col-xs-12 text-center" onclick="follow()">关注TA</div>
+                       
+						<div class="byLocation col-xs-12 text-center">
+							 
+
+							<em id="locationLabel" class="hideOnEdit">来自:</em>
+							<div id="location" class="location editable text-center" label="位置" name="location" contenteditable="false"><em>北京</em></div>
+						</div>
+
+						 <div  id="describeme" class="describeme bariol editable text-center col-xs-12 " name="describeme" label="name" contenteditable="false">个性签名：相看两不厌 唯有敬亭山</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="additionalFormFields" class="row fadeInOnEdit OPLiveForm hide">
+			<input type="text" style="display:none">
+			<input type="password" style="display:none">
+			<formitem class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-2">
+				<label for="email">邮箱</label>
+				<input type="email" required="" autocorrect="false" autocomplete="off" class="field" name="email" label="email" value="1624954751@qq.com">
+			</formitem>
+
+			<formitem class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-2">
+				<label for="phoneNumber">手机</label>
+				<input type="tel" required="" autocorrect="false" autocomplete="off" class="field" name="email" label="phone" value="18100170835">
+			</formitem>
+
+			<formitem class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-2">
+				<label for="motto">个性签名</label>
+				<input type="text" required="" autocorrect="false" autocomplete="off" class="field" name="email" label="motto" value="突然变成了一条咸鱼">
+			</formitem>
+
+			<formitem id="confirmPassword" class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-2" style="float:left;">
+				<label>密码</label>
+				<a href="#" class="labelLink" id="changePasswordLink" onClick="changePassword()">点击更改密码</a>
+				<input id="passwordField" class="field hide" type="password" name="password" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" autofill="false" placeholder="" onBlur="checkPasswordFiled()">
+			</formitem>
+			<p id="passwordConfirmTips" class="col-sm-4 col-md-6 col-sm-offset-2 col-md-offset-2" style="color: #facc2e;display: none;float:left">请输入现在的密码</p>
+			<formitem id="changePassword1" class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-2" style="display:none;">
+				<label>输入新密码</label>
+				<input id="newPasswordField1" maxlength="16" minlength="6" class="field" type="password" name="password" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" autofill="false" placeholder="请输入6-16位的密码">
+			</formitem>
+			<formitem id="changePassword2" class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-2" style="display:none;">
+				<label>确认新密码</label>
+				<input id="newPasswordField2" maxlength="16" minlength="6" class="field" type="password" name="password" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" autofill="false" placeholder="" onBlur="checkPW()">
+			</formitem>
+			<p id="newPasswordTips" class="col-sm-4 col-md-6 col-sm-offset-2 col-md-offset-2" style="color: #facc2e;display: none;">两次密码输入不同</p>
+		</div>
+		<div class="row tabs" id="toptabs">
+			<div class="col-md-12 tabContainer">
+				<ul id="top-tabs" class="nav nav-tabs " role="tablist">
+					<li role="presentation" class="active"><a name="sketches" href="#" data-target="#sketchesContainer" role="tab" data-toggle="tab"><span class="count" id="numberOfSketches">3</span>TA的作品</a>
+					</li>
+					<li role="presentation" class=""><a name="hearts" href="#" data-target="#heartsContainer" role="tab" data-toggle="tab"><span class="count" id="numberOfHearts">8</span> TA的收藏</a></li>
+					<li role="presentation" class=""><a name="follower" href="#" data-target="#followerContainer" role="tab" data-toggle="tab"><span class="count" id="numberOfFollowers">5</span> TA的关注</a></li>
+					 <li role="presentation" class=""><a name="follower" href="#" data-target="#followingContainer" role="tab" data-toggle="tab"><span class="count" id="numberOfFollowing">5</span> 关注TA的</a></li>
+				</ul>
+			</div>
+		</div>
+	</form>
+</div>
+
+
+
+<div id="content" class="tab-content">
+    <div id="sketchesContainer" role="tabpanel" class="tab-pane jumbotron active">
+    	<div class="container">
+                        <div class="mainSketches container">
+
+                         
+
+                            <div class="col-md-8">
+                            		
+                            <ul class="row text-center sketchList">
+                                
+                            <li class="col-xs-3 col-sm-3 col-md-3 sketchLi">
+                            	<a class="sketchThumbContainer" href="/sketch/484615">
+                            		<img src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail484615.jpg" data-src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail484615.jpg" class="sketchThumb">
+                            		<img src="image/blank.png" class="ratioKeeper"><div class="sketchLabel"><p><span class="sketchTitle">My Sketch</span></p></div></a></li>
+                            		<li class="col-xs-3 col-sm-3 col-md-3 sketchLi"><a class="sketchThumbContainer" href="/sketch/474094"><img src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail474094.jpg" data-src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail474094.jpg" class="sketchThumb"><img src="image/blank.png" class="ratioKeeper"><div class="sketchLabel"><p><span class="sketchTitle">My Sketch</span></p></div></a></li>
+                            		<li class="col-xs-3 col-sm-3 col-md-3 sketchLi"><a class="sketchThumbContainer" href="/sketch/474094"><img src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail474094.jpg" data-src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail474094.jpg" class="sketchThumb"><img src="image/blank.png" class="ratioKeeper"><div class="sketchLabel"><p><span class="sketchTitle">My Sketch</span></p></div></a></li>
+
+
+                            	</ul>
+                        </div>
+
+					<div id="heartsFeedContainer" class="hidden-xs col-md-offset-1 col-md-3">
+							
+							<div id="rightpart">
+							<p class="bariol">作品推荐</p>
+							<hr>
+
+							<ul id="heartsFeed" class="row sketchList">
+								<li class="col-xs-3 sketchLi">
+									<a class="sketchThumbContainer" href="/sktch/486307"><img src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail486307.jpg" data-src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail486307.jpg" class="sketchThumb">
+								   <img src="image/blank.png" class="ratioKeeper">
+								   <div class="sketchLabel"><p><span class="sketchTitle">Messy Curve Draw</span><br><span>by</span> 郑越升Sen</p>
+								</div></a>
+							</li>
+
+							<li class="col-xs-3 sketchLi">
+								<a class="sketchThumbContainer" href="/sketch/95408"><img src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail95408.jpg" data-src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail95408.jpg" class="sketchThumb">
+									<img src="image/blank.png" class="ratioKeeper">
+									<div class="sketchLabel"><p><span class="sketchTitle">MSA Fluid back in js</span><br><span>by</span> qdiiibp</p></div></a></li>
+
+
+							<li class="col-xs-3 sketchLi"><a class="sketchThumbContainer" href="/sketch/376645"><img src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail376645.jpg" data-src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail376645.jpg" class="sketchThumb"><img src="image/blank.png" class="ratioKeeper"><div class="sketchLabel"><p><span class="sketchTitle">Deformed lines</span><br><span>by</span> Bárbara Almeida</p></div></a></li>
+
+
+							<li class="col-xs-3 sketchLi"><a class="sketchThumbContainer" href="/sketch/472966"><img src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail472966.jpg" data-src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail472966.jpg" class="sketchThumb"><img src="image/blank.png" class="ratioKeeper"><div class="sketchLabel"><p><span class="sketchTitle">Noise flow field painter</span><br><span>by</span> Jason Labbe</p></div></a></li>
+
+							<li class="col-xs-3 sketchLi"><a class="sketchThumbContainer" href="/sketch/467262"><img src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail467262.jpg" data-src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail467262.jpg" class="sketchThumb"><img src="image/blank.png" class="ratioKeeper"><div class="sketchLabel"><p><span class="sketchTitle">171027</span><br><span>by</span> Saskia Freeke</p></div></a></li>
+
+						<li class="col-xs-3 sketchLi"><a class="sketchThumbContainer" href="/sketch/105410"><img src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail105410.jpg" data-src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail105410.jpg" class="sketchThumb"><img src="image/blank.png" class="ratioKeeper"><div class="sketchLabel"><p><span class="sketchTitle">EXP007 Ringlets</span><br><span>by</span> Michael Groufsky</p></div></a></li>
+							<li class="col-xs-3 sketchLi"><a class="sketchThumbContainer" href="/sketch/413567"><img src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail413567.jpg" data-src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail413567.jpg" class="sketchThumb"><img src="image/blank.png" class="ratioKeeper"><div class="sketchLabel"><p><span class="sketchTitle">Frozen brush</span><br><span>by</span> Jason Labbe</p></div></a></li>
+
+							<li class="col-xs-3 sketchLi"><a class="sketchThumbContainer" href="/sketch/434620"><img src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail434620.jpg" data-src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail434620.jpg" class="sketchThumb"><img src="image/blank.png" class="ratioKeeper"><div class="sketchLabel"><p><span class="sketchTitle">Constellation</span><br><span>by</span> Koï Koï</p></div></a></li>
+
+							<li class="col-xs-3 sketchLi"><a class="sketchThumbContainer" href="/sketch/434617"><img src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail434617.jpg" data-src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail434617.jpg" class="sketchThumb"><img src="image/blank.png" class="ratioKeeper"><div class="sketchLabel"><p><span class="sketchTitle">In and out</span><br><span>by</span> Gábor Damásdi</p></div></a></li>
+							<li class="col-xs-3 sketchLi"><a class="sketchThumbContainer" href="/sketch/240243"><img src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail240243.jpg" data-src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail240243.jpg" class="sketchThumb"><img src="image/blank.png" class="ratioKeeper"><div class="sketchLabel"><p><span class="sketchTitle">trying something</span><br><span>by</span> Jean-no</p></div></a></li>
+						</ul>
+
+
+                                  <div class="pull-right">
+                          <a class="btn btn-large btn-web" >查看更多</a>
+                    </div>
+							</div>
+
+							<div id="rightpart" style="margin-top: 50px;">
+							<p class="bariol">足迹</p>
+							<hr>
+
+							<ul id="heartsFeed" class="row sketchList">
+								<li class="col-xs-3 sketchLi">
+									<a class="sketchThumbContainer" href="/sktch/486307"><img src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail486307.jpg" data-src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail486307.jpg" class="sketchThumb">
+								   <img src="image/blank.png" class="ratioKeeper">
+								   <div class="sketchLabel"><p><span class="sketchTitle">Messy Curve Draw</span><br><span>by</span> 郑越升Sen</p>
+								</div></a>
+							</li>
+
+							<li class="col-xs-3 sketchLi">
+								<a class="sketchThumbContainer" href="/sketch/95408"><img src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail95408.jpg" data-src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail95408.jpg" class="sketchThumb">
+									<img src="image/blank.png" class="ratioKeeper">
+									<div class="sketchLabel"><p><span class="sketchTitle">MSA Fluid back in js</span><br><span>by</span> qdiiibp</p></div></a></li>
+
+
+							<li class="col-xs-3 sketchLi"><a class="sketchThumbContainer" href="/sketch/376645"><img src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail376645.jpg" data-src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail376645.jpg" class="sketchThumb"><img src="image/blank.png" class="ratioKeeper"><div class="sketchLabel"><p><span class="sketchTitle">Deformed lines</span><br><span>by</span> Bárbara Almeida</p></div></a></li>
+
+
+							<li class="col-xs-3 sketchLi"><a class="sketchThumbContainer" href="/sketch/472966"><img src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail472966.jpg" data-src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail472966.jpg" class="sketchThumb"><img src="image/blank.png" class="ratioKeeper"><div class="sketchLabel"><p><span class="sketchTitle">Noise flow field painter</span><br><span>by</span> Jason Labbe</p></div></a></li>
+
+							<li class="col-xs-3 sketchLi"><a class="sketchThumbContainer" href="/sketch/467262"><img src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail467262.jpg" data-src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail467262.jpg" class="sketchThumb"><img src="image/blank.png" class="ratioKeeper"><div class="sketchLabel"><p><span class="sketchTitle">171027</span><br><span>by</span> Saskia Freeke</p></div></a></li>
+
+						</ul>
+						<div class="pull-right">
+                          <a class="btn btn-large btn-web" >查看更多</a>
+
+                    </div>
+
+						
+							</div>
+
+
+						
+						</div>
+                    </div>
+
+                        <div class="collection archive hide">
+                            <div class="container collectionHeader">
+
+                                <div class="row">
+                                    <div class="collectionTitle col-sm-offset-2 col-md-offset-2 col-sm-8 col-md-8">
+                                        <div class="collectionCounter">&nbsp;</div>
+
+                                        <h2 class="bariol editable" name="title" label="Title">Archive</h2>
+                                    </div>
+                                    <div class="collectionIcons col-sm-2 col-md-2 text-right">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="collectionBorder">
+                            <div class="container">
+                                <div class="row content">
+                                    <div class="description col-md-offset-2 col-md-4">
+                                        These are legacy sketches using Java Applets that don’t work on browsers. Provided for code-sharing purposes only.
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="container-fluid">
+                                            <ul class="row sketchList">
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    </div>
+
+
+
+            <div id="heartsContainer" role="tabpanel" class="tab-pane jumbotron ">
+                        <div class="container">
+                        	   <div id="listToggle" onClick="setListView()" class="icon" onclick="list_grid()"></div>
+
+                            <ul id="heartsList" class="row sketchList">
+                            	<li class="sketch col-xs-4 col-sm-2 sketchLi"><a class="sketchThumbContainer" href="/sketch/472966"><img src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail472966.jpg" data-src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail472966.jpg" class="sketchThumb"><img src="image/blank.png" class="ratioKeeper"><div class="sketchLabel"><p><span class="sketchTitle">Noise flow field painter</span></p></div></a></li>
+
+                            	
+                            	<li class="sketch col-xs-4 col-sm-2 sketchLi"><a class="sketchThumbContainer" href="/sketch/472966"><img src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail472966.jpg" data-src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail472966.jpg" class="sketchThumb"><img src="image/blank.png" class="ratioKeeper"><div class="sketchLabel"><p><span class="sketchTitle">Noise flow field painter</span></p></div></a></li>
+
+                            	
+                            	<li class="sketch col-xs-4 col-sm-2 sketchLi"><a class="sketchThumbContainer" href="/sketch/472966"><img src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail472966.jpg" data-src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail472966.jpg" class="sketchThumb"><img src="image/blank.png" class="ratioKeeper"><div class="sketchLabel"><p><span class="sketchTitle">Noise flow field painter</span></p></div></a></li>
+
+                            	
+                            	<li class="sketch col-xs-4 col-sm-2 sketchLi"><a class="sketchThumbContainer" href="/sketch/472966"><img src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail472966.jpg" data-src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail472966.jpg" class="sketchThumb"><img src="image/blank.png" class="ratioKeeper"><div class="sketchLabel"><p><span class="sketchTitle">Noise flow field painter</span></p></div></a></li>
+
+                            	<li class="sketch col-xs-4 col-sm-2 sketchLi"><a class="sketchThumbContainer" href="/sketch/472966"><img src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail472966.jpg" data-src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail472966.jpg" class="sketchThumb"><img src="image/blank.png" class="ratioKeeper"><div class="sketchLabel"><p><span class="sketchTitle">Noise flow field painter</span></p></div></a></li>
+
+                            	<li class="sketch col-xs-4 col-sm-2 sketchLi"><a class="sketchThumbContainer" href="/sketch/472966"><img src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail472966.jpg" data-src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail472966.jpg" class="sketchThumb"><img src="image/blank.png" class="ratioKeeper"><div class="sketchLabel"><p><span class="sketchTitle">Noise flow field painter</span></p></div></a></li>
+
+
+
+                            <li class="sketch col-xs-4 col-sm-2 sketchLi"><a class="sketchThumbContainer" href="/sketch/477716"><img src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail477716.jpg" data-src="https://s3.amazonaws.com/openprocessing-usercontent/thumbnails/visualThumbnail477716.jpg" class="sketchThumb"><img src="image/blank.png" class="ratioKeeper"><div class="sketchLabel"><p><span class="sketchTitle">Tetris 2017<br></span></p></div></a></li>
+
+
+                        </ul>
+                        </div>
+                    </div>
+
+            <div id="followerContainer" role="tabpanel" class="tab-pane jumbotron">
+                      <div class="container">
+
+ <div class="row" id="follow-row">  
+      <div class="col-xs-2">
+        <div class="product-container followerCard">  
+          <div class="img text-center">  <img src="image/icon_follower.png" class="followerCardImg"> </div>  
+          <div class="followerCardName text-center">王小明</div>  
+        </div>  
+      </div>  
+   <div class="col-xs-2">  
+        <div class="product-container followerCard">  
+          <div class="img text-center">  <img src="image/icon_follower.png" class="followerCardImg"> </div> 
+          <div class="followerCardName text-center">王小明</div>   
+        </div>  
+      </div>
+     
+      
+        
+
+
+       </div>
+               
+        </div>
+    </div>
+
+           <div id="followingContainer" role="tabpanel" class="tab-pane jumbotron">
+                      <div class="container">
+
+ <div class="row" id="follow-row">  
+      <div class="col-xs-2">
+        <div class="product-container followerCard">  
+          <div class="img text-center">  <img src="image/icon_follower.png" class="followerCardImg"> </div>  
+          <div class="followerCardName text-center">周小垂</div>  
+        </div>  
+      </div>  
+   <div class="col-xs-2">  
+        <div class="product-container followerCard">  
+          <div class="img text-center">  <img src="image/icon_follower.png" class="followerCardImg"> </div> 
+          <div class="followerCardName text-center">周小垂</div>   
+        </div>  
+      </div>
+      <div class="col-xs-2">
+        <div class="product-container followerCard">  
+          <div class="img text-center">  <img src="image/icon_follower.png" class="followerCardImg"> </div>  
+          <div class="followerCardName text-center">周小垂</div>  
+        </div>  
+      </div>  
+   <div class="col-xs-2">  
+        <div class="product-container followerCard">  
+          <div class="img text-center">  <img src="image/icon_follower.png" class="followerCardImg"> </div> 
+          <div class="followerCardName text-center">周小垂</div>   
+        </div>  
+      </div>
+      <div class="col-xs-2">
+        <div class="product-container followerCard">  
+          <div class="img text-center">  <img src="image/icon_follower.png" class="followerCardImg"> </div>  
+          <div class="followerCardName text-center">周小垂</div>  
+        </div>  
+      </div>  
+   <div class="col-xs-2">  
+        <div class="product-container followerCard">  
+          <div class="img text-center">  <img src="image/icon_follower.png" class="followerCardImg"> </div> 
+          <div class="followerCardName text-center">周小垂</div>   
+        </div>  
+      </div>
+      <div class="col-xs-2">
+        <div class="product-container followerCard">  
+          <div class="img text-center">  <img src="image/icon_follower.png" class="followerCardImg"> </div>  
+          <div class="followerCardName text-center">周小垂</div>  
+        </div>  
+      </div>  
+   <div class="col-xs-2">  
+        <div class="product-container followerCard">  
+          <div class="img text-center">  <img src="image/icon_follower.png" class="followerCardImg"> </div> 
+          <div class="followerCardName text-center">周小垂</div>   
+        </div>  
+      </div>
+      <div class="col-xs-2">
+        <div class="product-container followerCard">  
+          <div class="img text-center">  <img src="image/icon_follower.png" class="followerCardImg"> </div>  
+          <div class="followerCardName text-center">周小垂</div>  
+        </div>  
+      </div>  
+   <div class="col-xs-2">  
+        <div class="product-container followerCard">  
+          <div class="img text-center">  <img src="image/icon_follower.png" class="followerCardImg"> </div> 
+          <div class="followerCardName text-center">周小垂</div>   
+        </div>  
+      </div>
+
+
+       </div>
+               
+        </div>
+    </div>
+</div>
+
+<script src="js/personalPage.js"></script>
+<script type="text/javascript">
+$(function(){
+	var nav=$(".tabContainer"); //得到导航对象
+	var content=$(".tab-content");
+	var topPanel=$("#topPanel");
+	var navBar=$(".navbar");
+	var win=$(window); //得到窗口对象
+	var sc=$(document);//得到document文档对象。
+	win.scroll(function(){
+	  if(sc.scrollTop()>=topPanel.height()-50){
+	  	  nav.addClass("fix"); 
+		  content.addClass("fixContent");
+		  navBar.addClass("fixNavBar");
+	  }else{
+		  nav.removeClass("fix"); 
+		  content.removeClass("fixContent");
+		  navBar.removeClass("fixNavBar");
+	  }
+	})  
+	})
+</script>
+</body>
+</html>

@@ -308,7 +308,7 @@ function beforeCodePlay(){
 	iframeWindow = iframe.contentWindow;
 	iframedocument.open();
 	if($(".move").attr("data-state") == "on"&&jsCanRun){
-		iframedocument.write('<html><head><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"></script><script src="js/error.js"></script> </head><body style="margin:0;"><script>'+value+'</script></body></html>');
+		iframedocument.write('<html><head><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"></script><script src="js/error.js"></script><script src="js/jquery-3.2.1.min.js"></script> </head><body style="margin:0;"><script>'+value+'</script></body></html>');
 	}else if($(".move").attr("data-state") == "on"&&!jsCanRun){
 		$("#alertContent h1").html("提示：");
 		$("#alertContent p").html("确认编写的是否为JS代码<br>或代码内缺少setup和draw两个核心函数");
@@ -316,7 +316,7 @@ function beforeCodePlay(){
 		$(".floatAlert").css("display","block");
 	}
 	if($(".move").attr("data-state") == "off"&&javaCanRun){
-		iframedocument.write('<html><head><script src="js/processing.js"></script><script src="js/error.js"></script> </head><body style="margin:0;"><script type="application/processing" target="processing-canvas">'+value+'</script><canvas id="processing-canvas"> </canvas></body></html>');
+		iframedocument.write('<html><head><script src="js/processing.js"></script><script src="js/error.js"></script><script src="js/jquery-3.2.1.min.js"></script> </head><body style="margin:0;"><script type="application/processing" target="processing-canvas">'+value+'</script><canvas id="processing-canvas"> </canvas></body></html>');
 	}else if($(".move").attr("data-state") == "off"&&!javaCanRun){
 		$("#alertContent h1").html("提示：");
 		$("#alertContent p").html("确认编写的是否为Java代码<br>或代码内缺少setup和draw两个核心函数");
@@ -352,8 +352,11 @@ codeWrite.click(function(){
 
 
 
-function addPage(){
-	document.getElementById("toptab").innerHTML+="<li class=\"selected\" contenteditable=\"false\" onClick=\"tabSelect(this)\"  ondblclick=\"changename(this)\" onblur=\"returnname(this)\">新草图<div contenteditable=\"false\" class=\"icon icon_x_small_dark tabCloseButton\" id=\"tabCloseButton"+ numOfTabs+"\" onclick=\"remove(this)\"></div></li>";
+function addPage(tabName){
+	if(tabName==undefined){
+		tabName = "新草图";
+	}
+	document.getElementById("toptab").innerHTML+="<li class=\"selected\" contenteditable=\"false\" onClick=\"tabSelect(this)\"  ondblclick=\"changename(this)\" onblur=\"returnname(this)\">"+tabName+"<div contenteditable=\"false\" class=\"icon icon_x_small_dark tabCloseButton\" id=\"tabCloseButton"+ numOfTabs+"\" onclick=\"remove(this)\"></div></li>";
 	for(var i=0;i<editor.length;i++){
 		$("#tabCloseButton"+i).parent().removeClass("selected");
 	}
@@ -448,10 +451,12 @@ function goIndex(){
 function autoSave(){
 	value = "";
 	for(var i=0;i<editor.length;i++){
+		value += editor[i].getValue();
 		if(i!=0){
-			value+=" \n ";
+			value+="<artCoding>" + $("#toptab").children().eq(i).text() + "</artCoding>";
+		}else{
+			value += "<artCoding>我的草图</artCoding>";
 		}
-		value+=editor[i].getValue();
 	}
 	localStorage.setItem("artCodingAutoSave",value);
 	
@@ -460,10 +465,27 @@ function autoSave(){
 if(localStorage.getItem("artCodingAutoSave")!=null){
 	if(confirm("您的草稿箱中有上次未完成的代码。 \n是否将代码恢复？")){
 		var code = localStorage.getItem("artCodingAutoSave");
-		editor[0].setValue(code);
+		var editor1Index = code.indexOf("<artCoding>我的草图</artCoding>");
+		editor[0].setValue(code.slice(0,editor1Index));
+		code = code.slice(editor1Index + 27);
+		tabDivide(code);
 		localStorage.removeItem("artCodingAutoSave");
 	}else{
 		localStorage.removeItem("artCodingAutoSave");
+	}
+}
+
+//tab分页函数
+function tabDivide(code){
+	if(code.indexOf("<artCoding>")!=-1){
+		var editorStartIndex = code.indexOf("<artCoding>");
+		var editorEndIndex = code.indexOf("</artCoding>");
+		addPage(code.slice(editorStartIndex + 11,editorEndIndex));
+		editor[numOfTabs-1].setValue(code.slice(0,editorStartIndex));
+		code = code.slice(editorEndIndex + 12);
+		tabDivide(code);
+	}else{
+		return;
 	}
 }
 //定时调用自动保存函数
